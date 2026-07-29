@@ -2,7 +2,10 @@ export default function Contact() {
   return (
     <section 
     id="contact"
-    className="py-20">
+    className="py-20
+
+    px-10
+    scroll-mt-20">
 
       <h2 className="text-4xl font-bold">
         Contact

@@ -1,5 +1,7 @@
 import Card from "./Card";
 import TechStack from "./TechStack";
+import MotionWrapper from "./animations/MotionWrapper";
+
 
 import {
     profile,
@@ -9,6 +11,7 @@ import {
 
 export default function About() {
   return (
+    <MotionWrapper>
     <section
       id="about"
       className="
@@ -113,5 +116,6 @@ export default function About() {
         <TechStack />
 
     </section>
+    </MotionWrapper>
   );
 }

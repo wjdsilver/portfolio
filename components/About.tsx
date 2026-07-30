@@ -43,6 +43,55 @@ export default function About() {
 
             </Card>
 
+        <Card title="Education">
+
+        <div className="space-y-8">
+
+            <div className="flex gap-6">
+
+            <div className="w-32 text-sm text-gray-500">
+                2025.3 – Present
+            </div>
+
+            <div>
+                <h3 className="text-black-600">
+                M.S. in Computer and Software Engineering
+                </h3>
+
+                <p className="text-gray-600">
+                Hanyang University
+                </p>
+            </div>
+
+            </div>
+
+
+            <div className="flex gap-6">
+
+            <div className="w-32 text-sm text-gray-500">
+                2021.3 – 2025.2
+            </div>
+
+            <div>
+                <h3 className="text-black-600">
+                B.S. in IT Media Engineering
+                </h3>
+
+                <p className="text-black-600">
+                B.S. in Computer Engineering
+                </p>
+
+                <p className="text-gray-600">
+                Duksung Womans University
+                </p>
+            </div>
+
+            </div>
+
+        </div>
+
+        </Card>
+
 
         <Card title="Research Interest">
 

@@ -11,9 +11,9 @@ export default function Contact() {
         Contact
       </h2>
 
-      <p>Email : your@email.com</p>
+      <p>Email : wjdsilver@gmail.com</p>
 
-      <p>GitHub : github.com/yourid</p>
+      <p>GitHub : https://github.com/wjdsilver</p>
 
     </section>
   );

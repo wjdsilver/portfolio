@@ -1,25 +1,10 @@
-type Project = {
-  title: string;
-  category: string;
-  description: string[];
-
-  contribution?: string[];
-
-  conferences?: string[];
-  achievements?: string[];
-
-  technologies: string[];
-  
-  links?: {
-    label: string;
-    url: string;
-  }[];
-};
-
+import ProjectCard, { Project } from "./ProjectCard";
 
 const projects: Project[] = [
   {
     title: "DOM 그래프 기반 피싱 웹페이지 탐지",
+    slug: "phishing",
+    image: "/images/phishing.png",
     category: "AI 보안 연구 · 석사 연구 (KCC 2026 → ICONIP 2026 → 졸업논문)",
     description: [
         "DOM 트리를 그래프로 변환하여 웹페이지 구조 표현",
@@ -64,6 +49,8 @@ const projects: Project[] = [
 
   {
   title: "safeT: AI 기술을 이용한 스마트 전동킥보드 안전 시스템",
+  slug: "safet",
+  image: "/images/safet1.jpeg",
   category: "AI · 컴퓨터 비전",
   description: [
         "얼굴 인식을 통한 사용자 인증",
@@ -113,6 +100,8 @@ const projects: Project[] = [
 
   {
     title: "똑부러지는 취업, 똑바른 자세부터 똑똑: AI 기반 태도 분석 모의면접 서비스",
+    slug: "interview",
+    image: "/images/interview1.png",
     category: "AI · 컴퓨터 비전",
     description: [
         "얼굴 랜드마크 기반 시선 추적",
@@ -146,6 +135,8 @@ const projects: Project[] = [
 
   {
     title: "개인 포트폴리오 웹사이트",
+    slug: "portfolio",
+    image: "/images/portfolio.png",
     category: "웹 개발",
     description: [
       "연구 중심 포트폴리오 웹사이트 개발",
@@ -164,278 +155,44 @@ const projects: Project[] = [
     ],
     links: [
     {
-      label: "Code",
-      url: "Github링크",
+      label: "코드",
+      url: "https://github.com/wjdsilver/portfolio",
     },
     ],
   },
 ];
 
-
-
 export default function Projects() {
-
   return (
-    <section className="
-    py-20
-    px-10
-    scroll-mt-20">
-
-
-      <h2 className="
-        text-4xl
-        font-bold
-        mb-10
-      ">
+    <section
+      className="
+        py-20
+        px-10
+        scroll-mt-20
+      "
+    >
+      <h2
+        className="
+          text-4xl
+          font-bold
+          mb-10
+        "
+      >
         프로젝트
       </h2>
 
+      <div className="grid gap-8">
 
+        {projects.map((project) => (
 
-      <div className="
-        grid
-        gap-8
-      ">
+          <ProjectCard
+            key={project.slug}
+            project={project}
+          />
 
-
-        {
-          projects.map((project)=>(
-            
-            <div
-              key={project.title}
-              className="
-                bg-white
-                rounded-xl
-                shadow
-                p-6
-              "
-            >
-
-
-              {/* Title */}
-              <h3 className="
-                text-xl
-                font-bold
-              ">
-                {project.title}
-              </h3>
-
-
-
-              {/* Category */}
-              <p className="
-                mt-1
-                text-sm
-                text-gray-500
-              ">
-                {project.category}
-              </p>
-
-
-
-              {/* Description */}
-              <ul className="
-                mt-4
-                space-y-2
-              ">
-
-                {
-                  project.description.map((item)=>(
-                    <li
-                      key={item}
-                      className="text-gray-700"
-                    >
-                      • {item}
-                    </li>
-                  ))
-                }
-
-              </ul>
-
-                {/* Contribution */}
-
-                {
-                project.contribution && (
-                    <div className="mt-6">
-
-                    <h4 className="
-                        font-semibold
-                        mb-3
-                    ">
-                        주요 기여
-                    </h4>
-
-
-                    <ul className="
-                        space-y-2
-                        text-gray-700
-                    ">
-
-                        {
-                        project.contribution.map((item)=>(
-                            <li key={item}>
-                            ✓ {item}
-                            </li>
-                        ))
-                        }
-
-                    </ul>
-
-                    </div>
-                )
-                }
-
-              {/* Conference Badge */}
-              {
-                project.conferences && (
-                  <div className="
-                    mt-6
-                    flex
-                    flex-wrap
-                    gap-3
-                  ">
-
-                    {
-                      project.conferences.map((conf)=>(
-                        <span
-                          key={conf}
-                          className="
-                            px-3
-                            py-1
-                            rounded-full
-                            bg-blue-50
-                            text-blue-700
-                            text-sm
-                          "
-                        >
-                          {conf}
-                        </span>
-                      ))
-                    }
-
-                  </div>
-                )
-              }
-
-              {/* Achievement */}
-                {
-                project.achievements && (
-                    <div className="
-                    mt-4
-                    flex
-                    flex-wrap
-                    gap-3
-                    ">
-
-                    {
-                        project.achievements.map((item)=>(
-                        <span
-                            key={item}
-                            className="
-                            px-3
-                            py-1
-                            rounded-full
-                            bg-purple-50
-                            text-purple-700
-                            text-sm
-                            "
-                        >
-                            {item}
-                        </span>
-                        ))
-                    }
-
-                    </div>
-                )
-                }
-
-              {/* Technology Badge */}
-              <div className="
-                mt-6
-                flex
-                flex-wrap
-                gap-2
-              ">
-
-                {
-                  project.technologies.map((tech)=>(
-                    <span
-                      key={tech}
-                      className="
-                        px-3
-                        py-1
-                        rounded-full
-                        border
-                        text-sm
-                      "
-                    >
-                      {tech}
-                    </span>
-                  ))
-                }
-
-              </div>
-
-
-
-              {/* Links */}
-                {
-  project.links && (
-    <div className="
-      mt-8
-      pt-6
-      border-t
-    ">
-
-      <p className="
-        text-sm
-        font-semibold
-        text-gray-500
-        mb-3
-      ">
-        관련 자료
-      </p>
-
-
-      <div className="
-        flex
-        gap-3
-      ">
-
-      {
-        project.links.map((link)=>(
-          <a
-            key={link.label}
-            href={link.url}
-            target="_blank"
-            className="
-              text-sm
-              text-gray-700
-              hover:text-black
-              underline
-            "
-          >
-            {link.label}
-          </a>
-        ))
-      }
+        ))}
 
       </div>
-
-    </div>
-  )
-}
-
-
-
-            </div>
-
-          ))
-        }
-
-
-      </div>
-
 
     </section>
   );

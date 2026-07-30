@@ -29,6 +29,10 @@ export default function PublicationCard({
 
     <div
       className="
+      transition-all
+        duration-300
+        hover:-translate-y-1
+        hover:shadow-xl
         bg-white
         rounded-xl
         shadow
@@ -98,6 +102,9 @@ export default function PublicationCard({
                 py-2
                 border
                 rounded-lg
+
+                transition
+                    hover:scale-105
               "
             >
               Paper PDF
@@ -117,6 +124,9 @@ export default function PublicationCard({
                 bg-black
                 text-white
                 rounded-lg
+
+                transition
+                    hover:scale-105
               "
             >
               Code

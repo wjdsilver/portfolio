@@ -1,4 +1,5 @@
 import PublicationCard from "./PublicationCard";
+import MotionWrapper from "./animations/MotionWrapper";
 
 import {
   publications
@@ -8,7 +9,7 @@ import {
 export default function Publications(){
 
   return (
-
+    <MotionWrapper>
     <section
       id="publications"
       className="
@@ -63,6 +64,7 @@ export default function Publications(){
 
 
     </section>
+    </MotionWrapper>
 
   );
 

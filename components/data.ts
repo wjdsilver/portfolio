@@ -55,6 +55,7 @@ export const techStack = [
 
 export const publications = [
   {
+    slug:"phishing",
     title:
       "Structural Phishing Detection Using Weisfeiler-Lehman Subtree Features on DOM Graphs",
 

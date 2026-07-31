@@ -20,6 +20,11 @@ export default function Card({
         rounded-xl
         shadow
         p-6
+
+        transition-all
+duration-300
+hover:-translate-y-1
+hover:shadow-xl
       "
     >
 

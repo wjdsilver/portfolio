@@ -165,6 +165,7 @@ const projects: Project[] = [
 export default function Projects() {
   return (
     <section
+        id="projects"
       className="
         py-20
         px-10

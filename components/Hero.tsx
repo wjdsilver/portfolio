@@ -1,6 +1,10 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function Hero() {
   return (
-    <section
+    <motion.section
       id="home"
       className="
         min-h-screen 
@@ -9,6 +13,12 @@ export default function Hero() {
         justify-center 
         items-center
       "
+        initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{
+        duration: 0.7,
+        ease: "easeOut",
+    }}
     >
 
       <h1 className="text-6xl font-bold">
@@ -56,6 +66,6 @@ export default function Hero() {
 
       </div>
 
-    </section>
+    </motion.section>
   );
 }

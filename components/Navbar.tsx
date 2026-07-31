@@ -7,6 +7,7 @@ export default function Navbar() {
         bg-white/80
         backdrop-blur
         p-5
+        z-50
       ">
 
       <div className="flex gap-8 justify-center">

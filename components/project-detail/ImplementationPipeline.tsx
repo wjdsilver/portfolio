@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import MotionWrapper from "../animations/MotionWrapper";
 
 
@@ -7,14 +8,16 @@ type ArchitectureStep = {
 };
 
 
+
+
 type ProjectArchitectureProps = {
-  image: string;
+  pipeline?: ReactNode;
   steps: ArchitectureStep[];
 };
 
 
 export default function ProjectArchitecture({
-  image,
+  pipeline,
   steps,
 }: ProjectArchitectureProps) {
   return (
@@ -26,13 +29,13 @@ export default function ProjectArchitecture({
         {/* Title */}
 
         <h2 className="text-3xl font-bold mb-8">
-          System Architecture
+          Implementation Pipeline
         </h2>
 
 
 
         {/* Architecture Image */}
-
+{pipeline && (
         <div
           className="
             rounded-2xl
@@ -50,17 +53,10 @@ export default function ProjectArchitecture({
           "
         >
 
-          <img
-            src={image}
-            alt="System Architecture"
-            className="
-              w-full
-              rounded-xl
-            "
-          />
+          {pipeline}
 
         </div>
-
+)}
 
 
         {/* Pipeline */}

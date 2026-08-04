@@ -1,13 +1,14 @@
 import ProjectHero from "@/components/project-detail/ProjectHero";
 import ProjectInfo from "@/components/project-detail/ProjectInfo";
 import ProjectOverview from "@/components/project-detail/ProjectOverview";
-import ProjectArchitecture from "@/components/project-detail/ProjectArchitecture";
+import ImplementationPipeline from "@/components/project-detail/ImplementationPipeline";
 import ProjectContributions from "@/components/project-detail/ProjectContributions";
 import ProjectTroubleshooting from "@/components/project-detail/ProjectTroubleshooting";
 import ProjectResults from "@/components/project-detail/ProjectResults";
 import ProjectLessons from "@/components/project-detail/ProjectLessons";
 import ProjectResources from "@/components/project-detail/ProjectResources";
 import BackToProjects from "@/components/project-detail/BackToProjects";
+import PhishingPipeline from "@/components/project-detail/pipelines/PhishingPipeline";
 
 export default function DomPhishingPage() {
   return (
@@ -68,10 +69,9 @@ export default function DomPhishingPage() {
         ]}
         />
 
-        <ProjectArchitecture
+        <ImplementationPipeline
 
-        image="/images/projects/dom-pipeline.png"
-
+        pipeline={<PhishingPipeline />}
 
         steps={[
 

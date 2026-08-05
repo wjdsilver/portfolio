@@ -3,6 +3,35 @@
 import Link from "next/link";
 import MotionWrapper from "../animations/MotionWrapper";
 
+function HeroImage({
+  image,
+  title,
+}: {
+  image: string;
+  title: string;
+}) {
+  return (
+    <div
+      className="
+        overflow-hidden
+        rounded-3xl
+        border
+        border-gray-200
+        shadow-sm
+        transition-all
+        duration-300
+        hover:shadow-xl
+      "
+    >
+      <img
+        src={image}
+        alt={title}
+        className="w-full h-full object-cover"
+      />
+    </div>
+  );
+}
+
 type Conference = {
   name: string;
   url?: string;
@@ -45,13 +74,32 @@ export default function ProjectHero({
               {category}
             </p>
 
-            <h1 className="mt-3 text-5xl font-bold leading-tight">
+            <h1
+              className="
+                mt-3
+                text-3xl
+                sm:text-4xl
+                lg:text-5xl
+                font-bold
+                leading-tight
+              "
+            >
               {title}
             </h1>
 
-            <p className="mt-4 text-gray-500">
+            <p className="mt-6 text-gray-500">
               {duration}
             </p>
+
+            {/* Mobile Image */}
+            <div className="mt-8 lg:hidden max-w-xl mx-auto">
+              <HeroImage
+                image={image}
+                title={title}
+              />
+            </div>
+
+            
 
             <p className="mt-8 leading-8 text-gray-700">
               {description}
@@ -72,15 +120,11 @@ export default function ProjectHero({
                       px-4
                       py-2
                       rounded-full
-
                       bg-blue-50
                       text-blue-700
-
                       text-sm
-
                       transition-all
                       duration-300
-
                       hover:bg-blue-100
                       hover:-translate-y-0.5
                     "
@@ -94,10 +138,8 @@ export default function ProjectHero({
                       px-4
                       py-2
                       rounded-full
-
                       bg-blue-50
                       text-blue-700
-
                       text-sm
                     "
                   >
@@ -124,17 +166,12 @@ export default function ProjectHero({
                     className="
                       px-3
                       py-1.5
-
                       rounded-full
-
                       border
                       border-gray-200
-
                       text-sm
-
                       transition-all
                       duration-300
-
                       hover:-translate-y-0.5
                       hover:shadow-md
                     "
@@ -149,41 +186,14 @@ export default function ProjectHero({
 
           </div>
 
-          {/* Right */}
+          {/* Right (Desktop Only) */}
 
-          <div>
-
-            <div
-              className="
-                overflow-hidden
-
-                rounded-3xl
-
-                border
-                border-gray-200
-
-                shadow-sm
-
-                transition-all
-                duration-300
-
-                hover:shadow-xl
-              "
-            >
-
-              <img
-                src={image}
-                alt={title}
-                className="
-                  w-full
-                  h-full
-                  object-cover
-                "
-              />
-
-            </div>
-
-          </div>
+        <div className="hidden lg:block">
+          <HeroImage
+            image={image}
+            title={title}
+          />
+        </div>
 
         </div>
 

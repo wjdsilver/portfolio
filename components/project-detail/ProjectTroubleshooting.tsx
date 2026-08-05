@@ -21,7 +21,9 @@ export default function ProjectTroubleshooting({
   return (
     <MotionWrapper>
 
-      <section className="max-w-6xl mx-auto px-8 py-20">
+      <section 
+      id="troubleshooting"
+      className="max-w-6xl mx-auto px-8 py-20">
 
 
         {/* Title */}

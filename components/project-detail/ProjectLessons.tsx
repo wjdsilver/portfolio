@@ -20,6 +20,7 @@ export default function ProjectLessons({
     <MotionWrapper>
 
       <section
+      id="lessons"
         className="
           max-w-6xl
           mx-auto

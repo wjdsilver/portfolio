@@ -7,11 +7,50 @@ import ProjectTroubleshooting from "@/components/project-detail/ProjectTroublesh
 import ProjectLessons from "@/components/project-detail/ProjectLessons";
 import ProjectResources from "@/components/project-detail/ProjectResources";
 import BackToProjects from "@/components/project-detail/BackToProjects";
+import ScrollToTop from "@/components/animations/ScrollToTop";
+import FloatingTOC from "@/components/project-detail/FloatingTOC";
 
 export default function DomPhishingPage() {
   return (
     <main>
+        <FloatingTOC
 
+sections={[
+  {
+    id:"overview",
+    title:"Overview"
+  },
+  {
+    id:"pipeline",
+    title:"Implementation"
+  },
+  {
+    id:"contributions",
+    title:"Contributions"
+  },
+  {
+    id:"troubleshooting",
+    title:"Troubleshooting"
+  },
+  {
+    id:"results",
+    title:"Results"
+  },
+  {
+    id:"lessons",
+    title:"Lessons"
+  },
+  {
+    id:"resources",
+    title:"Resources"
+  },
+]}
+
+/>
+            {/* Back Navigation */}
+      <div className="max-w-6xl mx-auto px-8 pt-8">
+        <BackToProjects />
+      </div>
       <ProjectHero
   category="AI Service · Computer Vision"
   title="똑똑: AI 기반 태도 분석 모의면접 서비스"
@@ -47,25 +86,25 @@ export default function DomPhishingPage() {
 />
 
         <ProjectOverview
-  paragraphs={[
-`
-취업 준비 과정에서 자신의 면접 태도를 객관적으로 확인하기 어렵다는 문제를 해결하기 위해
-웹캠 영상과 음성 데이터를 활용한 AI 기반 모의면접 서비스를 개발하였다.
-`,
-`
-본 프로젝트는 시선 분석과 음성 분석 기능을 통합하여
-실제 면접과 유사한 환경을 제공하고,
-면접 종료 후 시선 분석 결과와 음성 분석 결과를 종합한
-맞춤형 피드백 리포트를 제공하도록 설계하였다.
-`,
-`
-나는 dlib 기반 시선 추적 모듈 개발과
-Django REST Framework 기반 Backend 연동을 담당하였으며,
-사용자별 Calibration을 적용하여 시선 방향을 분석하고
-Frontend에서 활용 가능한 형태의 API를 구현하였다.
-`,
-]}
-/>
+        paragraphs={[
+        `
+        취업 준비 과정에서 자신의 면접 태도를 객관적으로 확인하기 어렵다는 문제를 해결하기 위해
+        웹캠 영상과 음성 데이터를 활용한 AI 기반 모의면접 서비스를 개발하였다.
+        `,
+        `
+        본 프로젝트는 시선 분석과 음성 분석 기능을 통합하여
+        실제 면접과 유사한 환경을 제공하고,
+        면접 종료 후 시선 분석 결과와 음성 분석 결과를 종합한
+        맞춤형 피드백 리포트를 제공하도록 설계하였다.
+        `,
+        `
+        나는 dlib 기반 시선 추적 모듈 개발과
+        Django REST Framework 기반 Backend 연동을 담당하였으며,
+        사용자별 Calibration을 적용하여 시선 방향을 분석하고
+        Frontend에서 활용 가능한 형태의 API를 구현하였다.
+        `,
+        ]}
+        />
 
         <InterviewWorkflow />
 
@@ -194,6 +233,7 @@ description:
   ]}
 />
 <BackToProjects />
+<ScrollToTop />
     </main>
   );
 }

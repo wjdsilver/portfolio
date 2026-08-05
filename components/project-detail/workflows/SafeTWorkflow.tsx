@@ -109,6 +109,7 @@ function WorkflowCard({
         {steps.map((step, index) => (
           <>
             <div
+            id="workflow"
               key={step.title}
               className="
                 w-52

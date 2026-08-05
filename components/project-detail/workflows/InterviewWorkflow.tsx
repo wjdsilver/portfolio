@@ -123,6 +123,7 @@ function WorkflowCard({
           <>
             <div
               key={step.title}
+              id="workflow"
               className="
                 w-52
                 h-56

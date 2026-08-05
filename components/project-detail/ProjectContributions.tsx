@@ -17,7 +17,9 @@ export default function ProjectContributions({
   return (
     <MotionWrapper>
 
-      <section className="max-w-6xl mx-auto px-8 py-20">
+      <section 
+      id="contributions"
+      className="max-w-6xl mx-auto px-8 py-20">
 
 
         {/* Title */}

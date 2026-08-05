@@ -9,6 +9,7 @@ export default function ProjectOverview({
 
   return (
     <section
+    id="overview"
       className="
         max-w-6xl
         mx-auto

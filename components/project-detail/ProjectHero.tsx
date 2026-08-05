@@ -15,12 +15,8 @@ function HeroImage({
       className="
         overflow-hidden
         rounded-3xl
-        border
-        border-gray-200
-        shadow-sm
         transition-all
         duration-300
-        hover:shadow-xl
       "
     >
       <img
@@ -60,7 +56,7 @@ export default function ProjectHero({
 }: ProjectHeroProps) {
   return (
     <MotionWrapper>
-      <section className="max-w-6xl mx-auto px-8 pt-28 pb-24">
+      <section className="max-w-6xl mx-auto px-8 pt-2 pb-24">
 
         {/* Main Content */}
 

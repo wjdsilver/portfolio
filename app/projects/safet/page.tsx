@@ -7,10 +7,50 @@ import ProjectTroubleshooting from "@/components/project-detail/ProjectTroublesh
 import ProjectLessons from "@/components/project-detail/ProjectLessons";
 import ProjectResources from "@/components/project-detail/ProjectResources";
 import BackToProjects from "@/components/project-detail/BackToProjects";
+import ScrollToTop from "@/components/animations/ScrollToTop";
+import FloatingTOC from "@/components/project-detail/FloatingTOC";
 
 export default function DomPhishingPage() {
   return (
     <main>
+        <FloatingTOC
+
+sections={[
+  {
+    id:"overview",
+    title:"Overview"
+  },
+  {
+    id:"pipeline",
+    title:"Implementation"
+  },
+  {
+    id:"contributions",
+    title:"Contributions"
+  },
+  {
+    id:"troubleshooting",
+    title:"Troubleshooting"
+  },
+  {
+    id:"results",
+    title:"Results"
+  },
+  {
+    id:"lessons",
+    title:"Lessons"
+  },
+  {
+    id:"resources",
+    title:"Resources"
+  },
+]}
+
+/>
+    {/* Back Navigation */}
+      <div className="max-w-6xl mx-auto px-8 pt-8">
+        <BackToProjects />
+      </div>
 
       <ProjectHero
         category="AI Service · Computer Vision"
@@ -181,7 +221,7 @@ export default function DomPhishingPage() {
         },
         ]}
         />
-        
+
         <ProjectResources
         resources={[
             {
@@ -211,6 +251,7 @@ export default function DomPhishingPage() {
         ]}
         />
 <BackToProjects />
+<ScrollToTop />
     </main>
   );
 }

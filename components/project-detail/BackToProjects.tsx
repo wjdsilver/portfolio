@@ -6,10 +6,8 @@ export default function BackToProjects() {
       className="
         max-w-6xl
         mx-auto
-        px-8
-        pb-20
+        pb-10
         flex
-        justify-end
       "
     >
       <Link
@@ -18,6 +16,7 @@ export default function BackToProjects() {
           inline-flex
           items-center
 
+
           text-sm
           text-gray-500
 
@@ -25,6 +24,7 @@ export default function BackToProjects() {
           duration-300
 
           hover:text-blue-700
+          hover:-translate-x-1
         "
       >
         ← Back to Projects

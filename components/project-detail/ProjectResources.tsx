@@ -21,6 +21,7 @@ export default function ProjectResources({
     <MotionWrapper>
 
       <section
+      id="resources"
         className="
           max-w-6xl
           mx-auto

@@ -18,9 +18,13 @@ const projects: Project[] = [
     ],
 
     conferences: [
-      "KCC 2026",
-      "ICONIP 2026",
+      "KCC2026",
+      "ICONIP2026",
     ],
+    achievements: [
+    "KCC2026 우수발표논문상",
+    "KCC2026 한국컴퓨터종합학술대회 논문 게재",
+  ],
     technologies: [
       "Python",
       "LLM",
@@ -63,11 +67,11 @@ const projects: Project[] = [
   "AI 기능과 시스템 연동 및 성능 검증",
 ],
   conferences: [
-      "ACK 2024",
+      "ACK2024",
     ],
   achievements: [
-    "2024 이브와 ICT멘토링 동상 수상",
-    "ACK 2024 학술발표대회 논문 게재",
+    "2024 이브와 ICT멘토링 동상",
+    "ACK2024 한국정보처리학회 논문 게재",
   ],
   technologies: [
     "Python",

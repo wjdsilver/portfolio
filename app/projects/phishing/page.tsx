@@ -5,6 +5,7 @@ import ImplementationPipeline from "@/components/project-detail/ImplementationPi
 import ProjectContributions from "@/components/project-detail/ProjectContributions";
 import ProjectTroubleshooting from "@/components/project-detail/ProjectTroubleshooting";
 import ProjectResults from "@/components/project-detail/ProjectResults";
+import ProjectAchievements from "@/components/project-detail/ProjectAchievements";
 import ProjectLessons from "@/components/project-detail/ProjectLessons";
 import ProjectResources from "@/components/project-detail/ProjectResources";
 import BackToProjects from "@/components/project-detail/BackToProjects";
@@ -17,38 +18,42 @@ export default function DomPhishingPage() {
     <main>
       <FloatingTOC
 
-sections={[
+  sections={[
   {
-    id:"overview",
-    title:"Overview"
-  },
-  {
-    id:"pipeline",
-    title:"Implementation"
-  },
-  {
-    id:"contributions",
-    title:"Contributions"
-  },
-  {
-    id:"troubleshooting",
-    title:"Troubleshooting"
-  },
-  {
-    id:"results",
-    title:"Results"
-  },
-  {
-    id:"lessons",
-    title:"Lessons"
-  },
-  {
-    id:"resources",
-    title:"Resources"
-  },
+  id: "overview",
+  title: "프로젝트 소개",
+},
+{
+  id: "pipeline",
+  title: "구현 과정",
+},
+{
+  id: "contributions",
+  title: "주요 기여",
+},
+{
+  id: "troubleshooting",
+  title: "트러블슈팅",
+},
+{
+  id: "results",
+  title: "결과 및 성능",
+},
+{
+  id: "achievements",
+  title: "주요 성과",
+},
+{
+  id: "lessons",
+  title: "배운 점",
+},
+{
+  id: "resources",
+  title: "관련 자료",
+},
 ]}
 
-/>
+  />
       {/* Back Navigation */}
       <div className="max-w-6xl mx-auto px-8 pt-8">
         <BackToProjects />
@@ -83,7 +88,7 @@ sections={[
       <ProjectInfo
         duration="2026. 02 – Present"
         role="First Author"
-        status="Published"
+        status="Ongoing Research"
         team="1 Researcher"
       />
 
@@ -300,6 +305,18 @@ issues={[
       confusionMatrixImage="/images/projects/confusion-matrix.png"
 
       />
+
+      <ProjectAchievements
+  achievements={[
+    {
+      title: "KCC 2026 우수발표논문상",
+      description:
+        "DOM Graph 기반 피싱 웹페이지 탐지 연구의 발표 성과를 인정받아 KCC 2026 우수발표논문상을 수상하였다.",
+      image: "/images/projects/phishing/kcc-award.png",
+    },
+  ]}
+/>
+
       <ProjectLessons
 
 lessons={[

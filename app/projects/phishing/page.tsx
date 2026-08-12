@@ -17,43 +17,42 @@ export default function DomPhishingPage() {
   return (
     <main>
       <FloatingTOC
-
-  sections={[
-  {
-  id: "overview",
-  title: "프로젝트 소개",
-},
-{
-  id: "pipeline",
-  title: "구현 과정",
-},
-{
-  id: "contributions",
-  title: "주요 기여",
-},
-{
-  id: "troubleshooting",
-  title: "트러블슈팅",
-},
-{
-  id: "results",
-  title: "결과 및 성능",
-},
-{
-  id: "achievements",
-  title: "주요 성과",
-},
-{
-  id: "lessons",
-  title: "배운 점",
-},
-{
-  id: "resources",
-  title: "관련 자료",
-},
-]}
-
+      sections={[
+        {
+        id: "overview",
+        title: "프로젝트 소개",
+      },
+      {
+        id: "pipeline",
+        title: "구현 과정",
+      },
+      {
+        id: "contributions",
+        title: "주요 기여",
+      },
+      {
+        id: "troubleshooting",
+        title: "트러블슈팅",
+      },
+      {
+        id: "results",
+        title: "결과 및 성능",
+      },
+      {
+        id: "achievements",
+        title: "주요 성과",
+      },
+      {
+        id: "lessons",
+        title: "배운 점",
+      },
+      {
+        id: "resources",
+        title: "관련 자료",
+      },
+    ]}
   />
+
       {/* Back Navigation */}
       <div className="max-w-6xl mx-auto px-8 pt-8">
         <BackToProjects />
@@ -62,13 +61,13 @@ export default function DomPhishingPage() {
       <ProjectHero
         category="AI 보안"
         title="DOM Graph 기반 피싱 웹페이지 탐지"
-        duration="2026.02 – Present"
+        duration="2026.02 – 현재"
         description="URL 기반 탐지 방식의 한계를 극복하기 위해 HTML 문서를 DOM Graph로 표현하고 Weisfeiler-Lehman Subtree Feature를 활용하여 구조 기반 피싱 웹페이지 탐지 방법을 연구하였다."
         image="/images/projects/dom-architecture.png"
         conferences={[
           {
             name: "KCC 2026",
-            url: "https://www.kiise.or.kr/",
+            url: "https://www.kiise.or.kr/conference/kcc/2026/",
           },
           {
             name: "ICONIP 2026",
@@ -86,10 +85,10 @@ export default function DomPhishingPage() {
       />
       
       <ProjectInfo
-        duration="2026. 02 – Present"
-        role="First Author"
-        status="Ongoing Research"
-        team="1 Researcher"
+        duration="2026. 02 – 현재"
+        role="제1저자"
+        status="진행 중"
+        team="개인 연구"
       />
 
         <ProjectOverview
@@ -261,45 +260,60 @@ issues={[
 
 />
 <ProjectResults
-
-      metrics={[
-        {
-          name: "Accuracy",
-          value: "95.87%",
-        },
-        {
-          name: "Recall",
-          value: "93.76%",
-        },
-        {
-          name: "F1-score",
-          value: "95.22%",
-        },
-      ]}
+  metrics={[
+    {
+      name: "Accuracy",
+      value: "96.19%",
+    },
+    {
+      name: "Phishing Recall",
+      value: "93.76%",
+    },
+    {
+      name: "F1-score",
+      value: "95.22%",
+    },
+  ]}
 
 
       comparisons={[
-        {
-          method: "Tag Count",
-          accuracy: "95.37%",
-          recall: "92.10%",
-          f1: "94.80%",
-        },
-
-        {
-          method: "Semantic Label",
-          accuracy: "95.56%",
-          recall: "92.85%",
-          f1: "95.01%",
-        },
-
-        {
-          method: "WL Subtree Feature",
-          accuracy: "95.87%",
-          recall: "93.76%",
-          f1: "95.22%",
-        },
-      ]}
+  {
+    method: "Tag Count",
+    accuracy: "95.02%",
+    recall: "92.23%",
+    f1: "93.76%",
+  },
+  {
+    method: "Semantic Count",
+    accuracy: "95.37%",
+    recall: "91.84%",
+    f1: "94.15%",
+  },
+  {
+    method: "DOM Statistical",
+    accuracy: "92.76%",
+    recall: "88.87%",
+    f1: "90.87%",
+  },
+  {
+    method: "WL Subtree (h=1)",
+    accuracy: "95.91%",
+    recall: "93.09%",
+    f1: "94.87%",
+  },
+  {
+    method: "WL Subtree (h=2)",
+    accuracy: "96.19%",
+    recall: "93.76%",
+    f1: "95.22%",
+  },
+  {
+    method: "WL Subtree (h=3)",
+    accuracy: "96.11%",
+    recall: "93.67%",
+    f1: "95.13%",
+  },
+]}
 
 
       confusionMatrixImage="/images/projects/confusion-matrix.png"

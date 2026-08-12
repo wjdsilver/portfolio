@@ -151,7 +151,7 @@ export default function ProjectHero({
             <div className="mt-10">
 
               <h3 className="font-semibold mb-4">
-                Tech Stack
+                기술 스택
               </h3>
 
               <div className="flex flex-wrap gap-3">

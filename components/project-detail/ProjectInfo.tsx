@@ -13,19 +13,19 @@ export default function ProjectInfo({
 }: ProjectInfoProps) {
   const items = [
     {
-      label: "Duration",
+      label: "기간",
       value: duration,
     },
     {
-      label: "Role",
+      label: "역할",
       value: role,
     },
     {
-      label: "Status",
+      label: "상태",
       value: status,
     },
     {
-      label: "Team",
+      label: "연구형태",
       value: team,
     },
   ];

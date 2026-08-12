@@ -49,7 +49,7 @@ export default function ProjectResults({
             mb-8
           "
         >
-          Results
+          결과 및 성능
         </h2>
 
 
@@ -122,7 +122,7 @@ export default function ProjectResults({
                 mb-6
               "
             >
-              Performance Comparison
+              성능 비교
             </h3>
 
 

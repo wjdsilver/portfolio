@@ -18,7 +18,7 @@ export default function ProjectAchievements({
       id="achievements"
       className="max-w-6xl mx-auto px-8 py-16"
     >
-      <h2 className="text-2xl font-bold">
+      <h2 className="text-3xl font-bold mb-8">
         주요 성과
       </h2>
 

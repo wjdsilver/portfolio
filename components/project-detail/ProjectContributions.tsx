@@ -25,7 +25,7 @@ export default function ProjectContributions({
         {/* Title */}
 
         <h2 className="text-3xl font-bold mb-8">
-          My Contributions
+          주요 기여
         </h2>
 
 

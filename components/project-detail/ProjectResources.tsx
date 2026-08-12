@@ -37,7 +37,7 @@ export default function ProjectResources({
             mb-8
           "
         >
-          Related Resources
+          관련 자료
         </h2>
 
 
@@ -133,7 +133,7 @@ export default function ProjectResources({
                   font-medium
                 "
               >
-                View Resource →
+                자료 보기 →
               </p>
 
 

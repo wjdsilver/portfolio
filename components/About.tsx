@@ -19,7 +19,8 @@ export default function About() {
         flex
         flex-col
         justify-center
-        px-10
+        px-4 
+        md:px-10
         scroll-mt-20
       "
     >
@@ -47,54 +48,47 @@ export default function About() {
 
             </Card>
 
-        <Card title="Education">
+            <Card title="Education">
+  <div className="space-y-8">
 
-        <div className="space-y-8">
+    <div className="grid grid-cols-[120px_1fr] gap-6">
+      <div className="text-sm text-gray-500">
+        2025.3 – Present
+      </div>
 
-            <div className="flex gap-6">
+      <div>
+        <h3 className="font-medium">
+          M.S. in Computer and Software Engineering
+        </h3>
 
-            <div className="w-32 text-sm text-gray-500">
-                2025.3 – Present
-            </div>
+        <p className="text-gray-600">
+          Hanyang University
+        </p>
+      </div>
+    </div>
 
-            <div>
-                <h3 className="text-black-600">
-                M.S. in Computer and Software Engineering
-                </h3>
+    <div className="grid grid-cols-[120px_1fr] gap-6">
+      <div className="text-sm text-gray-500">
+        2021.3 – 2025.2
+      </div>
 
-                <p className="text-gray-600">
-                Hanyang University
-                </p>
-            </div>
+      <div>
+        <h3 className="font-medium">
+          B.S. in IT Media Engineering
+        </h3>
 
-            </div>
+        <p>
+          B.S. in Computer Engineering
+        </p>
 
+        <p className="text-gray-600">
+          Duksung Women's University
+        </p>
+      </div>
+    </div>
 
-            <div className="flex gap-6">
-
-            <div className="w-32 text-sm text-gray-500">
-                2021.3 – 2025.2
-            </div>
-
-            <div>
-                <h3 className="text-black-600">
-                B.S. in IT Media Engineering
-                </h3>
-
-                <p className="text-black-600">
-                B.S. in Computer Engineering
-                </p>
-
-                <p className="text-gray-600">
-                Duksung Womans University
-                </p>
-            </div>
-
-            </div>
-
-        </div>
-
-        </Card>
+  </div>
+</Card>
 
 
         <Card title="Research Interest">

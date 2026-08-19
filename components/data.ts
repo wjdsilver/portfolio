@@ -7,7 +7,8 @@ export const profile = [
 export const researchInterests = [
   "AI Security",
   "Graph Machine Learning",
-  "Phishing Detection"
+  "Computer Vision",
+  "Applied AI"
 ];
 
 
@@ -71,15 +72,16 @@ export const publications = [
     ],
 
     venue:
-      "ICONIP 2026",
+      "ICONIP",
 
-    year:
-      "2026",
+      year: "2026",
 
-    description:
-      "An analysis of structural differences between human-crafted and LLM-generated phishing webpages.",
-
-    paper:
+      status: "Accepted · Poster Presentation",
+  
+      description:
+        "Investigates structural phishing detection using Weisfeiler-Lehman subtree features on DOM graphs, with a focus on comparing human-crafted and LLM-generated phishing webpages.",
+  
+      paper:
       "#",
 
     code:
@@ -101,15 +103,15 @@ export const publications = [
         }
     ],
 
-    venue:
-      "KCC 2026",
+    venue: "한국컴퓨터종합학술대회 (KCC)",
+    year: "2026",
 
-    year:
-      "2026",
+    status: "Presented",
+
+    award: "우수발표논문상",
 
     description:
-      "최근 phishing 웹페이지는 정상 웹페이지와 매우 유사하게 제작되어 기존의 URL 및 콘텐츠 기반 탐지 방법에는 한계가 존재한다. 본 연구에서는 웹페이지 DOM 구조를 그래프로 표현하고, Weisfeiler-Lehman(WL) subtree feature를 활용하여 구조 기반으로 phishing 웹페이지를 탐지한다. 실험 결과, 제안 방법은 기존 DOM 통계 특징 대비 높은 recall을 보였으며, 웹페이지 구조가 phishing 탐지에 유의미한 정보를 제공함을 확인하였다. 또한 tag 기반 방법과의 비교를 통해, WL 기반 구조 feature가 기존 방법이 놓친 phishing 샘플을 보완적으로 탐지할 수 있음을 확인하였다.",
-
+"웹페이지의 HTML 구조를 DOM 그래프로 표현하고 Weisfeiler-Lehman Subtree 특징을 추출하여 피싱 웹페이지의 구조적 패턴을 학습하고 탐지하는 방법을 제안했습니다.",
     paper:
       "https://github.com/user-attachments/files/29327766/KCC2026_15_505_DOM.Graph.Feature.Phishing.pdf",
 
@@ -146,14 +148,14 @@ export const publications = [
     ],
 
     venue:
-      "ACK 2024 (31권 2호)",
+      "ACK (31권 2호)",
 
     year:
       "2024",
+      status: "Presented",
 
     description:
-      "교통사고분석 시스템(TAAS, 도로교통공단) 통계에 따르면 PM(Personal Mobility) 관련 교통사고는 2023년 2389건으로, 2019년 447건 대비 5배 이상 증가하였다. 증가하는 교통사고를 예방하기 위해 본 논문에서는 AI 기술을 이용한 스마트 전동 킥보드 안전 시스템을 제시한다. AI 딥러닝 기반 모델을 적용해 무면허, 헬멧 미착용, 2인 이상 탑승, 횡단보도 주행, 교통안전에 위배되는 무단 주차를 제한한다. 본 시스템을 통해 전동 킥보드 이용자들의 도로 교통법 준수와 공공의 안전 강화를 기대한다.",
-
+    "OCR 기반 신분증 정보 추출과 얼굴 임베딩 기반 본인 인증 기능을 구현하여 사용자 인증 파이프라인을 구축했습니다. Python 기반 AI 기능을 FastAPI 서버와 Flutter 애플리케이션에 연동하여 스마트 전동 킥보드 안전 시스템의 프로토타입을 개발했습니다.",
     paper:
       "https://www.manuscriptlink.com/society/kips/conference/ack2024/file/downloadSoConfManuscript/abs/KIPS_C2024B0165",
 

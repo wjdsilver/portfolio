@@ -36,7 +36,7 @@ const stacks = [
 
 export default function TechStack() {
   return (
-    <section className="py-20">
+    <section className="px-4 md:px-10 py-20">
 
       <h2 className="text-3xl font-bold mb-10">
         Tech Stack

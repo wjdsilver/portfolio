@@ -172,7 +172,8 @@ export default function Projects() {
         id="projects"
       className="
         py-20
-        px-10
+        px-4 
+        md:px-10
         scroll-mt-20
       "
     >
@@ -183,7 +184,7 @@ export default function Projects() {
           mb-10
         "
       >
-        프로젝트
+        Projects
       </h2>
 
       <div className="grid gap-8">

@@ -15,7 +15,7 @@ import FloatingTOC from "@/components/project-detail/FloatingTOC";
 
 export default function DomPhishingPage() {
   return (
-    <main>
+    <main className="w-full min-w-0 overflow-x-hidden">
       <FloatingTOC
       sections={[
         {
@@ -93,23 +93,9 @@ export default function DomPhishingPage() {
 
         <ProjectOverview
         paragraphs={[
-            `
-            기존의 피싱 탐지 방법은 URL 문자열이나
-            웹페이지 시각적 특징에 의존하여 탐지하는 방식이
-            주로 사용되어 왔다.
-            `,
+          '기존의 피싱 탐지 방법은 URL 문자열이나 웹페이지의 시각적 특징에 주로 의존한다. 본 프로젝트에서는 웹페이지의 HTML 문서를 DOM Graph로 표현하고, Weisfeiler-Lehman Subtree Feature를 활용하여 구조적 패턴을 기반으로 피싱 웹페이지를 탐지하는 방법을 연구하였다.',
 
-            `
-            하지만 URL 난독화 및 정교하게 제작된
-            피싱 페이지 증가로 인해 구조적인 분석 방법의
-            필요성이 증가하고 있다.
-            `,
-
-            `
-            본 프로젝트에서는 HTML 문서를 DOM Graph로 변환하고,
-            Weisfeiler-Lehman Subtree Feature를 활용하여
-            피싱 웹페이지를 탐지하는 방법을 제안하였다.
-            `,
+          '특히 피싱 웹페이지와 정상 웹페이지가 시각적 요소나 URL 정보 없이 구조적 특징만으로 구분될 수 있는지를 분석하고, 이러한 구조적 특성이 LLM으로 생성된 피싱 웹페이지에서도 유지되는지를 검증하였다.',
         ]}
         />
 

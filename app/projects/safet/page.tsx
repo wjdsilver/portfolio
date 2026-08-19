@@ -12,7 +12,7 @@ import FloatingTOC from "@/components/project-detail/FloatingTOC";
 
 export default function DomPhishingPage() {
   return (
-    <main>
+    <main className="w-full min-w-0 overflow-x-hidden">
         <FloatingTOC
 
 sections={[
@@ -63,7 +63,7 @@ sections={[
         conferences={[
             {
             name: "ACK 2024",
-            url: "#",
+            url: "https://www.manuscriptlink.com/society/kips/conference/ack2024/pastConf",
             },
             {
             name: "ICT 멘토링",

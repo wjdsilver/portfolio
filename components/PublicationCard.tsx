@@ -8,6 +8,8 @@ type PublicationCardProps = {
   authors: Author[];
   venue: string;
   year: string;
+  status?: string;
+  award?: string;
   description: string;
   paper?: string;
   code?: string;
@@ -19,6 +21,8 @@ export default function PublicationCard({
   authors,
   venue,
   year,
+  status,
+  award,
   description,
   paper,
   code
@@ -74,10 +78,23 @@ export default function PublicationCard({
         </p>
 
 
-      <p className="mt-1 text-sm text-gray-500">
-        {venue} · {year}
-      </p>
+        <div className="mt-2 flex items-center gap-2 text-sm">
+  <span className="text-gray-500">
+    {venue} · {year}
+  </span>
 
+  {status && (
+    <span className="text-gray-500">
+      {status}
+    </span>
+  )}
+
+  {award && (
+    <span className="font-medium text-gray-800">
+      🏆 {award}
+    </span>
+  )}
+</div>
 
 
       <p className="mt-4">

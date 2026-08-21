@@ -38,7 +38,7 @@ type ProjectHeroProps = {
   title: string;
   duration: string;
   description: string;
-  image: string;
+  image?: string;
 
   conferences: Conference[];
 
@@ -60,7 +60,14 @@ export default function ProjectHero({
 
         {/* Main Content */}
 
-        <div className="mt-10 grid lg:grid-cols-2 gap-14 items-center">
+          <div
+          className={`
+            mt-10
+            grid
+            ${image ? "lg:grid-cols-2 gap-14" : "grid-cols-1"}
+            items-center
+          `}
+        >
 
           {/* Left */}
 
@@ -88,12 +95,14 @@ export default function ProjectHero({
             </p>
 
             {/* Mobile Image */}
-            <div className="mt-8 lg:hidden max-w-xl mx-auto">
-              <HeroImage
-                image={image}
-                title={title}
-              />
-            </div>
+            {image && (
+              <div className="mt-8 lg:hidden max-w-xl mx-auto">
+                <HeroImage
+                  image={image}
+                  title={title}
+                />
+              </div>
+            )}
 
             
 
@@ -183,13 +192,14 @@ export default function ProjectHero({
           </div>
 
           {/* Right (Desktop Only) */}
-
-        <div className="hidden lg:block">
-          <HeroImage
-            image={image}
-            title={title}
-          />
-        </div>
+          {image && (
+            <div className="hidden lg:block">
+              <HeroImage
+                image={image}
+                title={title}
+              />
+            </div>
+          )}
 
         </div>
 

@@ -240,7 +240,7 @@ sections={[
             title: "Conference Paper",
             description:
                 "ACK 2024 학술발표대회 논문",
-            url: "#",
+            url: "https://doi.org/10.3745/PKIPS.y2024m10a.1043",
             },
             {
             title: "Project Video",

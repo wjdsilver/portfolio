@@ -12,7 +12,7 @@ export default function Contact() {
         Contact
       </h2>
 
-      <p>Email : wjdsilver@gmail.com</p>
+      <p>Email : wjdsilver@hanyang.ac.kr</p>
 
       <p>GitHub : https://github.com/wjdsilver</p>
 

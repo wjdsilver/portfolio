@@ -1,7 +1,6 @@
 import ProjectHero from "@/components/project-detail/ProjectHero";
 import ProjectInfo from "@/components/project-detail/ProjectInfo";
 import ProjectOverview from "@/components/project-detail/ProjectOverview";
-import InterviewWorkflow from "@/components/project-detail/workflows/InterviewWorkflow";
 import ProjectContributions from "@/components/project-detail/ProjectContributions";
 import ProjectTroubleshooting from "@/components/project-detail/ProjectTroubleshooting";
 import ProjectLessons from "@/components/project-detail/ProjectLessons";
@@ -10,230 +9,225 @@ import BackToProjects from "@/components/project-detail/BackToProjects";
 import ScrollToTop from "@/components/animations/ScrollToTop";
 import FloatingTOC from "@/components/project-detail/FloatingTOC";
 
-export default function DomPhishingPage() {
+export default function PortfolioPage() {
   return (
     <main className="w-full min-w-0 overflow-x-hidden">
-        <FloatingTOC
+      <FloatingTOC
+        sections={[
+          {
+            id: "overview",
+            title: "프로젝트 소개",
+          },
+          {
+            id: "contributions",
+            title: "주요 기여",
+          },
+          {
+            id: "troubleshooting",
+            title: "트러블슈팅",
+          },
+          {
+            id: "lessons",
+            title: "배운 점",
+          },
+          {
+            id: "resources",
+            title: "관련 자료",
+          },
+        ]}
+      />
 
-sections={[
-  {
-    id:"overview",
-    title:"Overview"
-  },
-  {
-    id:"pipeline",
-    title:"Implementation"
-  },
-  {
-    id:"contributions",
-    title:"Contributions"
-  },
-  {
-    id:"troubleshooting",
-    title:"Troubleshooting"
-  },
-  {
-    id:"results",
-    title:"Results"
-  },
-  {
-    id:"lessons",
-    title:"Lessons"
-  },
-  {
-    id:"resources",
-    title:"Resources"
-  },
-]}
-
-/>
-            {/* Back Navigation */}
+      {/* Back Navigation */}
       <div className="max-w-6xl mx-auto px-8 pt-8">
         <BackToProjects />
       </div>
+
       <ProjectHero
-  category="AI Service · Computer Vision"
-  title="똑똑: AI 기반 태도 분석 모의면접 서비스"
-  duration="2024.03 – 2024.10"
-  description="웹캠 영상과 음성 데이터를 활용하여 사용자의 면접 태도를 분석하는 AI 기반 모의면접 서비스를 개발하였다.
-시선 추적과 음성 분석 기능을 통합하여 면접 종료 후 맞춤형 피드백과 결과 리포트를 제공하는 Prototype을 구현하였다."
-  image="/images/projects/ddokddok-thumbnail.png"
-  conferences={[
-    {
-      name: "ICT 멘토링",
-      url: "#",
-    },
-    {
-      name: "입상",
-      url: "#",
-    },
-  ]}
-  techStack={[
-    "Python",
-    "OpenCV",
-    "dlib",
-    "Django REST Framework",
-    "Postman",
-    "Google Cloud",
-  ]}
-/>
-      
-      <ProjectInfo
-  duration="2024.03 – 2024.10"
-  role="Backend & Gaze Tracking Developer"
-  status="Completed"
-  team="4 Developers"
-/>
-
-        <ProjectOverview
-        paragraphs={[
-        `
-        취업 준비 과정에서 자신의 면접 태도를 객관적으로 확인하기 어렵다는 문제를 해결하기 위해
-        웹캠 영상과 음성 데이터를 활용한 AI 기반 모의면접 서비스를 개발하였다.
-        `,
-        `
-        본 프로젝트는 시선 분석과 음성 분석 기능을 통합하여
-        실제 면접과 유사한 환경을 제공하고,
-        면접 종료 후 시선 분석 결과와 음성 분석 결과를 종합한
-        맞춤형 피드백 리포트를 제공하도록 설계하였다.
-        `,
-        `
-        나는 dlib 기반 시선 추적 모듈 개발과
-        Django REST Framework 기반 Backend 연동을 담당하였으며,
-        사용자별 Calibration을 적용하여 시선 방향을 분석하고
-        Frontend에서 활용 가능한 형태의 API를 구현하였다.
-        `,
+        category="Frontend Development · UI/UX"
+        title="개인 연구 및 프로젝트 포트폴리오 웹사이트"
+        duration="2026.07 – 현재"
+        description="AI Security와 Graph Machine Learning 연구 경험 및 프로젝트를 효과적으로 소개하기 위해 Next.js 기반의 개인 포트폴리오 웹사이트를 설계하고 개발하였다. 재사용 가능한 컴포넌트 구조와 프로젝트 상세 페이지를 중심으로 연구 성과, 기술적 기여 및 문제 해결 과정을 체계적으로 정리하였다."
+        conferences={[]}
+        techStack={[
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Framer Motion",
+          "Git",
+          "GitHub",
         ]}
-        />
+      />
 
-        <InterviewWorkflow />
+      <ProjectInfo
+        duration="2026.07 – 현재"
+        role="프론트엔드 · UI/UX 디자인"
+        status="진행중" 
+        team="개인 프로젝트"
+      />
 
-        <ProjectContributions
-  contributions={[
-    {
-      title: "Calibration 기반 시선 추적 알고리즘 구현",
-      description:
-        "dlib Shape Predictor 68 Face Landmarks 모델을 활용하여 얼굴 랜드마크를 검출하고, 사용자별 Calibration 과정을 통해 시선 추적 정확도를 향상시켰다.",
-    },
-    {
-      title: "6개 영역 기반 시선 분석 알고리즘 개발",
-      description:
-        "동공 위치를 기반으로 화면을 6개의 영역으로 분할하여 사용자의 시선 분포를 분석하고, 정면 응시 비율과 영역별 응시 횟수를 계산하는 로직을 구현하였다.",
-    },
-    {
-      title: "Django REST Framework API 개발",
-      description:
-        "시선 추적 시작 및 종료 API를 구현하고 분석 결과를 모델에 저장하여 Frontend에서 결과 리포트를 생성할 수 있도록 Backend를 개발하였다.",
-    },
-    {
-      title: "AI 기능과 Backend 연동",
-      description:
-        "시선 추적 모듈과 Django Backend를 연결하고 Postman을 활용하여 API를 검증하였으며, Frontend와 데이터 연동을 위한 Response 구조를 설계하였다.",
-    },
-    {
-      title: "서비스 통합 및 배포 지원",
-      description:
-        "Google Cloud 환경에서 서비스 배포를 지원하고 AI 기능이 실제 서비스 흐름에서 동작할 수 있도록 통합 작업에 참여하였다.",
-    },
-    {
-      title: "ICT 멘토링 프로젝트 입상",
-      description:
-        "프로젝트 결과를 바탕으로 ICT 멘토링 최종 발표를 수행하고 서비스 Prototype을 완성하였다.",
-    },
-  ]}
-/>
+      <ProjectOverview
+        paragraphs={[
+          `
+기존의 단순한 이력서 형식 포트폴리오가 아닌,
+연구 프로젝트의 문제 정의부터 구현 과정, 기술적 기여,
+트러블슈팅 및 성과까지 하나의 흐름으로 보여줄 수 있는
+연구 중심 포트폴리오 웹사이트를 개발하였다.
+`,
+          `
+Next.js와 React를 기반으로 페이지를 구성하고,
+프로젝트 카드와 상세 페이지를 컴포넌트화하여
+여러 프로젝트에 동일한 정보 구조를 재사용할 수 있도록 설계하였다.
+`,
+          `
+특히 AI 보안 연구, Computer Vision 프로젝트,
+논문 및 학회 활동 등 서로 다른 형태의 경험을
+일관된 디자인 시스템 안에서 표현하는 것을 목표로 하였다.
+`,
+        ]}
+      />
 
-<ProjectTroubleshooting
-  issues={[
-    {
-problem:
-"실시간 시선 추적 결과를 Frontend에 지속적으로 전달해야 했다.",
+      <ProjectContributions
+        contributions={[
+          {
+            title: "연구 중심 포트폴리오 정보 구조 설계",
+            description:
+              "About, Publications, Projects 등 주요 콘텐츠를 구성하고, 프로젝트별 연구 배경부터 구현 과정, 결과, 성과까지 하나의 흐름으로 확인할 수 있도록 정보 구조를 설계하였다.",
+          },
 
-cause:
-"초기에는 WebSocket 기반 실시간 통신을 고려했지만 개발 기간과 시스템 복잡도를 고려할 때 구현 부담이 컸다.",
+          {
+            title: "재사용 가능한 프로젝트 상세 페이지 컴포넌트 구현",
+            description:
+              "ProjectHero, ProjectInfo, ProjectOverview, ProjectContributions, ProjectTroubleshooting, ProjectResults, ProjectLessons, ProjectResources 등 공통 컴포넌트를 설계하여 여러 프로젝트에서 동일한 구조를 재사용할 수 있도록 구현하였다.",
+          },
 
-solution:
-"면접 시작 시 시선 추적을 시작하고 종료 시 분석 결과를 반환하는 REST API 구조로 변경하였다. 분석 과정에서는 프레임별 시선 정보를 누적하여 최종 결과만 전달하도록 설계하였다.",
+          {
+            title: "프로젝트 데이터 기반 카드 구조 설계",
+            description:
+              "프로젝트 정보를 객체 형태로 관리하고 ProjectCard 컴포넌트에서 이를 렌더링하도록 구성하여 프로젝트 추가 및 수정이 용이한 구조를 구현하였다.",
+          },
 
-result:
-"구현 복잡도를 낮추면서도 안정적으로 시선 분석 결과를 제공할 수 있었다.",
-},
+          {
+            title: "연구 성과 및 학술 활동 시각화",
+            description:
+              "학회 발표, 논문 게재, 우수발표논문상 등 프로젝트의 연구 성과를 프로젝트 카드와 상세 페이지에서 명확하게 확인할 수 있도록 구성하였다.",
+          },
 
-{
-problem:
-"사용자마다 눈의 위치와 카메라 환경이 달라 동일한 기준으로 시선을 판단하기 어려웠다.",
+          {
+            title: "Framer Motion 기반 인터랙션 구현",
+            description:
+              "스크롤 기반 Fade In 애니메이션과 Hover Interaction을 적용하여 콘텐츠 탐색 과정에서 자연스러운 움직임과 시각적 피드백을 제공하였다.",
+          },
 
-cause:
-"동공 좌표만으로는 사용자별 얼굴 크기와 카메라 위치 차이를 보정할 수 없었다.",
+          {
+            title: "반응형 UI 및 사용자 경험 개선",
+            description:
+              "Tailwind CSS를 활용하여 화면 크기에 따라 레이아웃이 자연스럽게 조정되도록 구현하고, 모바일 환경에서 가로 스크롤 문제가 발생하지 않도록 페이지 구조를 개선하였다.",
+          },
 
-solution:
-"면접 시작 전 화면 각 모서리를 응시하도록 하는 Calibration 과정을 추가하여 사용자별 기준값을 저장하고 이를 기반으로 시선 방향을 계산하였다.",
+          {
+            title: "프로젝트 상세 페이지 탐색 기능 구현",
+            description:
+              "Floating Table of Contents와 Scroll To Top 기능을 추가하여 긴 프로젝트 상세 페이지에서도 사용자가 원하는 섹션으로 빠르게 이동할 수 있도록 구현하였다.",
+          },
+        ]}
+      />
 
-result:
-"사용자별 편차를 줄여 보다 안정적인 시선 추적 결과를 얻을 수 있었다.",
-},
+      <ProjectTroubleshooting
+        issues={[
+          {
+            problem:
+              "여러 프로젝트에서 동일한 상세 페이지 UI를 반복 구현해야 했다.",
 
-{
-problem:
-"프로젝트 진행 중 Backend 담당 인원의 이탈로 AI 기능과 서비스 연동을 직접 수행해야 했다.",
+            cause:
+              "프로젝트마다 페이지를 개별적으로 작성할 경우 코드 중복이 증가하고 디자인 수정 시 모든 페이지를 수정해야 하는 문제가 있었다.",
 
-cause:
-"기존 통합 구조가 변경되면서 AI 모듈과 Backend API를 새롭게 연결해야 했다.",
+            solution:
+              "ProjectHero, ProjectInfo, ProjectOverview 등 콘텐츠 영역을 공통 컴포넌트로 분리하고, 프로젝트별 내용은 Props를 통해 전달하는 구조로 변경하였다.",
 
-solution:
-"Django REST Framework를 학습하여 API를 직접 구현하고 Postman으로 테스트를 수행하며 시선 추적 결과를 저장하고 Frontend와 연동하였다.",
+            result:
+              "새로운 프로젝트 페이지를 추가할 때 공통 UI를 다시 구현하지 않고 콘텐츠 데이터만 작성하여 일관된 디자인을 유지할 수 있었다.",
+          },
 
-result:
-"서비스 기능을 정상적으로 통합하여 프로젝트를 완성할 수 있었다.",
-},
-  ]}
-/>
+          {
+            problem:
+              "프로젝트 상세 페이지마다 콘텐츠 양과 구조가 달라 디자인 일관성을 유지하기 어려웠다.",
+
+            cause:
+              "AI 연구 프로젝트와 Computer Vision 기반 서비스 프로젝트는 결과물과 설명 방식이 달라 동일한 UI를 적용하기 어려웠다.",
+
+            solution:
+              "모든 프로젝트에서 Overview, Contributions, Troubleshooting, Results, Lessons, Resources와 같은 공통 정보 구조를 사용하고 필요한 섹션만 선택적으로 구성하도록 설계하였다.",
+
+            result:
+              "프로젝트의 성격은 유지하면서도 전체 포트폴리오에서 통일된 사용자 경험을 제공할 수 있었다.",
+          },
+
+          {
+            problem:
+              "긴 프로젝트 상세 페이지에서 원하는 내용을 빠르게 찾기 어려웠다.",
+
+            cause:
+              "연구 과정과 실험 결과, 트러블슈팅 등 콘텐츠가 증가하면서 사용자가 전체 페이지를 스크롤해야 하는 문제가 발생하였다.",
+
+            solution:
+              "섹션별 id를 기반으로 Floating Table of Contents를 구현하고 smooth scrolling을 적용하여 원하는 섹션으로 이동할 수 있도록 하였다.",
+
+            result:
+              "긴 프로젝트 페이지에서도 주요 내용을 빠르게 탐색할 수 있어 콘텐츠 접근성이 향상되었다.",
+          },
+
+          {
+            problem:
+              "Framer Motion을 적용하는 과정에서 Server Component와 Client Component 관련 오류가 발생하였다.",
+
+            cause:
+              "Next.js App Router 환경에서는 animation 기능과 브라우저 API를 사용하는 컴포넌트를 Client Component로 관리해야 했다.",
+
+            solution:
+              "MotionWrapper와 애니메이션 관련 컴포넌트에 use client를 적용하고, Server Component에서 직접 Motion Component를 호출하지 않도록 구조를 분리하였다.",
+
+            result:
+              "Next.js의 Server Component 구조를 유지하면서도 스크롤 기반 애니메이션을 안정적으로 적용할 수 있었다.",
+          },
+        ]}
+      /> 
 
       <ProjectLessons
-  lessons={[
-    {
-title:"실시간 AI 서비스 구조 설계 경험",
+        lessons={[
+          {
+            title: "컴포넌트 설계의 중요성",
+            description:
+              "처음에는 하나의 페이지를 완성하는 것에 집중했지만, 프로젝트가 증가하면서 재사용 가능한 컴포넌트 구조를 설계하는 것이 유지보수성과 확장성에 큰 영향을 준다는 점을 경험하였다.",
+          },
 
-description:
-"실시간 처리 방식과 REST API 기반 처리 방식을 비교하며 프로젝트 환경에 적합한 시스템 구조를 설계하는 경험을 얻었다."
-},
+          {
+            title: "연구 경험을 제품처럼 표현하는 방법",
+            description:
+              "논문과 연구 결과를 단순히 나열하는 것이 아니라 문제 정의, 구현, 실험, 성과 및 배운 점으로 구조화함으로써 연구 경험을 비전공자도 이해할 수 있는 형태로 전달하는 방법을 고민하였다.",
+          },
 
-{
-title:"Computer Vision과 Backend 통합",
+          {
+            title: "Next.js App Router 구조 이해",
+            description:
+              "Server Component와 Client Component의 역할을 구분하고 애니메이션 및 사용자 인터랙션 기능을 적절히 분리하면서 Next.js 기반 애플리케이션 구조에 대한 이해를 높일 수 있었다.",
+          },
+        ]}
+      />
 
-description:
-"dlib 기반 Computer Vision 알고리즘을 Django REST Framework와 연결하여 실제 서비스에서 활용 가능한 AI 기능을 구현하였다."
-},
+      <ProjectResources
+        resources={[
+          {
+            title: "GitHub",
+            description:
+              "포트폴리오 웹사이트의 전체 소스 코드와 개발 기록",
+            url: "https://github.com/wjdsilver/portfolio",
+          },
+        ]}
+      />
 
-{
-title:"서비스 통합 과정의 중요성",
-
-description:
-"AI 모델 구현뿐 아니라 Frontend, Backend, API 설계 및 배포 환경까지 고려해야 실제 서비스가 완성된다는 점을 경험하였다."
-},
-  ]}
-/>
-<ProjectResources
-  resources={[
-    {
-      title: "GitHub - Backend",
-      description: "Backend Repository",
-      url: "#",
-    },
-    {
-      title: "GitHub - Frontend",
-      description: "Frontend Repository",
-      url: "#",
-    },
-    {
-      title: "Project Presentation",
-      description: "ICT 멘토링 최종 발표",
-      url: "#",
-    },
-  ]}
-/>
-<BackToProjects />
-<ScrollToTop />
+      <BackToProjects />
+      <ScrollToTop />
     </main>
   );
 }

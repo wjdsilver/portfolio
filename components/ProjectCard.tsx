@@ -6,7 +6,7 @@ export type Project = {
   slug: string;
   title: string;
   category: string;
-  image: string;
+  image?: string;
 
   description: string[];
 
@@ -51,7 +51,15 @@ export default function ProjectCard({ project }: Props) {
             cursor-pointer
           "
         >
-          <div className="flex flex-col-reverse md:flex-row gap-6 md:gap-10 items-start">
+          <div
+            className={`
+                flex
+                ${project.image ? "flex-col-reverse md:flex-row" : "flex-col"}
+                gap-6
+                md:gap-10
+                items-start
+            `}
+            >
 
             {/* Left */}
             <div className="w-full flex-1">
@@ -166,19 +174,21 @@ export default function ProjectCard({ project }: Props) {
             </div>
 
             {/* Image */}
+            {project.image && (
             <div className="relative w-full md:w-1/3 aspect-[16/9] overflow-hidden rounded-xl">
-              <Image
+                <Image
                 src={project.image}
                 alt={project.title}
                 fill
                 className="
-                  object-cover
-                  transition-transform
-                  duration-500
-                  group-hover:scale-105
+                    object-cover
+                    transition-transform
+                    duration-500
+                    group-hover:scale-105
                 "
-              />
+                />
             </div>
+            )}
 
           </div>
         </Link>

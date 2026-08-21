@@ -3,16 +3,16 @@ const stacks = [
     category: "Programming",
     skills: [
       "Python",
-      "C++",
       "JavaScript",
+      "TypeScript",
     ],
   },
   {
     category: "AI / ML",
     skills: [
+        "OpenCV",
       "PyTorch",
       "Scikit-learn",
-      "NetworkX",
     ],
   },
   {
@@ -20,7 +20,8 @@ const stacks = [
     skills: [
       "Next.js",
       "React",
-      "Docker",
+      "FastAPI",
+      "Git / GitHub",
     ],
   },
   {
@@ -29,6 +30,7 @@ const stacks = [
       "Graph ML",
       "DOM Analysis",
       "LLM",
+      "AI Security",
     ],
   },
 ];

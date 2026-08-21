@@ -76,16 +76,12 @@ export const publications = [
 
       year: "2026",
 
-      status: "Accepted · Poster Presentation",
+      status: "초록 발표 채택 · 현장 포스터 발표 예정",
   
       description:
         "Investigates structural phishing detection using Weisfeiler-Lehman subtree features on DOM graphs, with a focus on comparing human-crafted and LLM-generated phishing webpages.",
   
-      paper:
-      "#",
-
-    code:
-      "https://github.com/"
+      
   },
 
     {
@@ -106,7 +102,7 @@ export const publications = [
     venue: "한국컴퓨터종합학술대회 (KCC)",
     year: "2026",
 
-    status: "Presented",
+    status: "현장 포스터 발표",
 
     award: "우수발표논문상",
 
@@ -152,12 +148,12 @@ export const publications = [
 
     year:
       "2024",
-      status: "Presented",
+      status: "현장 포스터 발표",
 
     description:
     "OCR 기반 신분증 정보 추출과 얼굴 임베딩 기반 본인 인증 기능을 구현하여 사용자 인증 파이프라인을 구축했습니다. Python 기반 AI 기능을 FastAPI 서버와 Flutter 애플리케이션에 연동하여 스마트 전동 킥보드 안전 시스템의 프로토타입을 개발했습니다.",
     paper:
-      "https://www.manuscriptlink.com/society/kips/conference/ack2024/file/downloadSoConfManuscript/abs/KIPS_C2024B0165",
+      "https://doi.org/10.3745/PKIPS.y2024m10a.1043",
 
     code:
       "https://github.com/safeT-CE"

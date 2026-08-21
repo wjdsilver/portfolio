@@ -174,7 +174,7 @@ export default function SafeTWorkflow() {
       <section className="max-w-6xl mx-auto px-8 py-20">
 
         <h2 className="text-3xl font-bold mb-4">
-          Service Workflow
+          서비스 이용 흐름
         </h2>
 
         <p className="text-gray-600 max-w-3xl leading-7 mb-14">
@@ -186,12 +186,12 @@ export default function SafeTWorkflow() {
         <div className="space-y-10">
 
           <WorkflowCard
-            title="Registration Flow"
+            title="사용자 등록 및 인증 과정"
             steps={registrationFlow}
           />
 
           <WorkflowCard
-            title="Rental Flow"
+            title="킥보드 대여 과정"
             steps={rentalFlow}
           />
 

@@ -4,7 +4,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Publications from "@/components/Publications";
 import Projects from "@/components/Projects";
-
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -22,6 +22,7 @@ export default function Home() {
       <Projects />
       <Publications />
       <Contact />
+      <Footer />
     </main>
   );
 }

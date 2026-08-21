@@ -63,7 +63,7 @@ export default function DomPhishingPage() {
         title="DOM Graph 기반 피싱 웹페이지 탐지"
         duration="2026.02 – 현재"
         description="URL 기반 탐지 방식의 한계를 극복하기 위해 HTML 문서를 DOM Graph로 표현하고 Weisfeiler-Lehman Subtree Feature를 활용하여 구조 기반 피싱 웹페이지 탐지 방법을 연구하였다."
-        image="/images/projects/dom-architecture.png"
+
         conferences={[
           {
             name: "KCC 2026",

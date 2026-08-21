@@ -29,7 +29,7 @@ export default function ProjectArchitecture({
         {/* Title */}
 
         <h2 className="text-3xl font-bold mb-8">
-          Implementation Pipeline
+          구현 과정
         </h2>
 
 

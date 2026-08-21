@@ -97,7 +97,7 @@ export default function FloatingTOC({
               text-gray-800
             "
           >
-            Contents
+            목차
           </p>
 
           <div className="space-y-3">

@@ -12,7 +12,7 @@ import FloatingTOC from "@/components/project-detail/FloatingTOC";
 
 export default function DomPhishingPage() {
   return (
-    <main>
+    <main className="w-full min-w-0 overflow-x-hidden">
       <FloatingTOC
 
 sections={[

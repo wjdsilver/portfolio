@@ -30,13 +30,9 @@ export default function ProjectLessons({
       >
 
         <h2
-          className="
-            text-3xl
-            font-bold
-            mb-8
-          "
+          className="text-3xl font-bold mb-8"
         >
-          Lessons Learned
+          배운 점
         </h2>
 
 

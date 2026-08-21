@@ -15,45 +15,44 @@ import FloatingTOC from "@/components/project-detail/FloatingTOC";
 
 export default function DomPhishingPage() {
   return (
-    <main>
+    <main className="w-full min-w-0 overflow-x-hidden">
       <FloatingTOC
-
-  sections={[
-  {
-  id: "overview",
-  title: "프로젝트 소개",
-},
-{
-  id: "pipeline",
-  title: "구현 과정",
-},
-{
-  id: "contributions",
-  title: "주요 기여",
-},
-{
-  id: "troubleshooting",
-  title: "트러블슈팅",
-},
-{
-  id: "results",
-  title: "결과 및 성능",
-},
-{
-  id: "achievements",
-  title: "주요 성과",
-},
-{
-  id: "lessons",
-  title: "배운 점",
-},
-{
-  id: "resources",
-  title: "관련 자료",
-},
-]}
-
+      sections={[
+        {
+        id: "overview",
+        title: "프로젝트 소개",
+      },
+      {
+        id: "pipeline",
+        title: "구현 과정",
+      },
+      {
+        id: "contributions",
+        title: "주요 기여",
+      },
+      {
+        id: "troubleshooting",
+        title: "트러블슈팅",
+      },
+      {
+        id: "results",
+        title: "결과 및 성능",
+      },
+      {
+        id: "achievements",
+        title: "주요 성과",
+      },
+      {
+        id: "lessons",
+        title: "배운 점",
+      },
+      {
+        id: "resources",
+        title: "관련 자료",
+      },
+    ]}
   />
+
       {/* Back Navigation */}
       <div className="max-w-6xl mx-auto px-8 pt-8">
         <BackToProjects />
@@ -62,13 +61,13 @@ export default function DomPhishingPage() {
       <ProjectHero
         category="AI 보안"
         title="DOM Graph 기반 피싱 웹페이지 탐지"
-        duration="2026.02 – Present"
+        duration="2026.02 – 현재"
         description="URL 기반 탐지 방식의 한계를 극복하기 위해 HTML 문서를 DOM Graph로 표현하고 Weisfeiler-Lehman Subtree Feature를 활용하여 구조 기반 피싱 웹페이지 탐지 방법을 연구하였다."
-        image="/images/projects/dom-architecture.png"
+
         conferences={[
           {
             name: "KCC 2026",
-            url: "https://www.kiise.or.kr/",
+            url: "https://www.kiise.or.kr/conference/kcc/2026/",
           },
           {
             name: "ICONIP 2026",
@@ -86,31 +85,17 @@ export default function DomPhishingPage() {
       />
       
       <ProjectInfo
-        duration="2026. 02 – Present"
-        role="First Author"
-        status="Ongoing Research"
-        team="1 Researcher"
+        duration="2026. 02 – 현재"
+        role="제1저자"
+        status="진행 중"
+        team="개인 연구"
       />
 
         <ProjectOverview
         paragraphs={[
-            `
-            기존의 피싱 탐지 방법은 URL 문자열이나
-            웹페이지 시각적 특징에 의존하여 탐지하는 방식이
-            주로 사용되어 왔다.
-            `,
+          '기존의 피싱 탐지 방법은 URL 문자열이나 웹페이지의 시각적 특징에 주로 의존한다. 본 프로젝트에서는 웹페이지의 HTML 문서를 DOM Graph로 표현하고, Weisfeiler-Lehman Subtree Feature를 활용하여 구조적 패턴을 기반으로 피싱 웹페이지를 탐지하는 방법을 연구하였다.',
 
-            `
-            하지만 URL 난독화 및 정교하게 제작된
-            피싱 페이지 증가로 인해 구조적인 분석 방법의
-            필요성이 증가하고 있다.
-            `,
-
-            `
-            본 프로젝트에서는 HTML 문서를 DOM Graph로 변환하고,
-            Weisfeiler-Lehman Subtree Feature를 활용하여
-            피싱 웹페이지를 탐지하는 방법을 제안하였다.
-            `,
+          '특히 피싱 웹페이지와 정상 웹페이지가 시각적 요소나 URL 정보 없이 구조적 특징만으로 구분될 수 있는지를 분석하고, 이러한 구조적 특성이 LLM으로 생성된 피싱 웹페이지에서도 유지되는지를 검증하였다.',
         ]}
         />
 
@@ -261,45 +246,60 @@ issues={[
 
 />
 <ProjectResults
-
-      metrics={[
-        {
-          name: "Accuracy",
-          value: "95.87%",
-        },
-        {
-          name: "Recall",
-          value: "93.76%",
-        },
-        {
-          name: "F1-score",
-          value: "95.22%",
-        },
-      ]}
+  metrics={[
+    {
+      name: "Accuracy",
+      value: "96.19%",
+    },
+    {
+      name: "Phishing Recall",
+      value: "93.76%",
+    },
+    {
+      name: "F1-score",
+      value: "95.22%",
+    },
+  ]}
 
 
       comparisons={[
-        {
-          method: "Tag Count",
-          accuracy: "95.37%",
-          recall: "92.10%",
-          f1: "94.80%",
-        },
-
-        {
-          method: "Semantic Label",
-          accuracy: "95.56%",
-          recall: "92.85%",
-          f1: "95.01%",
-        },
-
-        {
-          method: "WL Subtree Feature",
-          accuracy: "95.87%",
-          recall: "93.76%",
-          f1: "95.22%",
-        },
-      ]}
+  {
+    method: "Tag Count",
+    accuracy: "95.02%",
+    recall: "92.23%",
+    f1: "93.76%",
+  },
+  {
+    method: "Semantic Count",
+    accuracy: "95.37%",
+    recall: "91.84%",
+    f1: "94.15%",
+  },
+  {
+    method: "DOM Statistical",
+    accuracy: "92.76%",
+    recall: "88.87%",
+    f1: "90.87%",
+  },
+  {
+    method: "WL Subtree (h=1)",
+    accuracy: "95.91%",
+    recall: "93.09%",
+    f1: "94.87%",
+  },
+  {
+    method: "WL Subtree (h=2)",
+    accuracy: "96.19%",
+    recall: "93.76%",
+    f1: "95.22%",
+  },
+  {
+    method: "WL Subtree (h=3)",
+    accuracy: "96.11%",
+    recall: "93.67%",
+    f1: "95.13%",
+  },
+]}
 
 
       confusionMatrixImage="/images/projects/confusion-matrix.png"

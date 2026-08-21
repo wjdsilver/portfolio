@@ -19,7 +19,7 @@ export default function ProjectOverview({
     >
 
       <h2 className="text-3xl font-bold mb-8">
-        Project Overview
+        프로젝트 소개
       </h2>
 
 

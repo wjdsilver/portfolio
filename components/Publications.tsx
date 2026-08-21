@@ -14,7 +14,8 @@ export default function Publications(){
       id="publications"
       className="
         min-h-screen
-        px-10
+        px-4 
+        md:px-10
         py-20
         scroll-mt-20
       "
@@ -48,6 +49,8 @@ export default function Publications(){
               title={publication.title}
               authors={publication.authors}
               venue={publication.venue}
+              status={publication.status}
+              award={publication.award}
               year={publication.year}
               description={publication.description}
 

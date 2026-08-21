@@ -4,7 +4,6 @@ const projects: Project[] = [
   {
     title: "DOM 그래프 기반 피싱 웹페이지 탐지",
     slug: "phishing",
-    image: "/images/phishing.png",
     category: "AI 보안 연구 · 석사 연구 (KCC 2026 → ICONIP 2026 → 졸업논문)",
     description: [
         "DOM 트리를 그래프로 변환하여 웹페이지 구조 표현",
@@ -19,11 +18,11 @@ const projects: Project[] = [
 
     conferences: [
       "KCC2026",
-      "ICONIP2026",
+      "ICONIP2026(Accepted)",
     ],
     achievements: [
     "KCC2026 우수발표논문상",
-    "KCC2026 한국컴퓨터종합학술대회 논문 게재",
+    "KCC2026 한국 정보과학회 학술발표논문집 논문 게재",
   ],
     technologies: [
       "Python",
@@ -45,7 +44,7 @@ const projects: Project[] = [
     },
     {
       label: "포스터",
-      url: "https://private-user-images.githubusercontent.com/104892553/612933443-c38c7e2a-c5ac-4980-b180-bf82d1205fe7.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODUzNzc0NzgsIm5iZiI6MTc4NTM3NzE3OCwicGF0aCI6Ii8xMDQ4OTI1NTMvNjEyOTMzNDQzLWMzOGM3ZTJhLWM1YWMtNDk4MC1iMTgwLWJmODJkMTIwNWZlNy5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwNzMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDczMFQwMjA2MThaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03OWEzOTIwNDc3Y2Y0NmIxY2I5M2YxOGE4ZTVjYjUxYWZlZTlkMDEzODE3MTI4YWZkN2RmZDRkNzQ0ZGFjMDc0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZqcGVnIn0.oH2ZO9KNvIjbUUhzSBQscnXSfpBDd4KS8ztL87StYjk",
+      url: "https://private-user-images.githubusercontent.com/104892553/612933443-c38c7e2a-c5ac-4980-b180-bf82d1205fe7.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODcxOTU3OTAsIm5iZiI6MTc4NzE5NTQ5MCwicGF0aCI6Ii8xMDQ4OTI1NTMvNjEyOTMzNDQzLWMzOGM3ZTJhLWM1YWMtNDk4MC1iMTgwLWJmODJkMTIwNWZlNy5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwODIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDgyMFQwMzExMzBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jMzllZDllYWEyMzEzNzA1YWQ4MjU4MmJhMDQ3NWFjOGNjYTBiOTIxYWZkNDRmNzc0NjYyNDY0ZWQ3MDEwMjUwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZqcGVnIn0.GB9ZSOKJODiJI1dWbqakOE88QAsgp8SEO-TF1cTQWiI",
     },
     ],
   },
@@ -71,7 +70,7 @@ const projects: Project[] = [
     ],
   achievements: [
     "2024 이브와 ICT멘토링 동상",
-    "ACK2024 한국정보처리학회 논문 게재",
+    "ACK2024 학술발표대회 논문 게재",
   ],
   technologies: [
     "Python",
@@ -140,7 +139,6 @@ const projects: Project[] = [
   {
     title: "개인 포트폴리오 웹사이트",
     slug: "portfolio",
-    image: "/images/portfolio.png",
     category: "웹 개발",
     description: [
       "연구 중심 포트폴리오 웹사이트 개발",
@@ -172,7 +170,8 @@ export default function Projects() {
         id="projects"
       className="
         py-20
-        px-10
+        px-4 
+        md:px-10
         scroll-mt-20
       "
     >
@@ -183,7 +182,7 @@ export default function Projects() {
           mb-10
         "
       >
-        프로젝트
+        Projects
       </h2>
 
       <div className="grid gap-8">

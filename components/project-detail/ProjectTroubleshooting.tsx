@@ -29,7 +29,7 @@ export default function ProjectTroubleshooting({
         {/* Title */}
 
         <h2 className="text-3xl font-bold mb-8">
-          Troubleshooting
+          트러블슈팅
         </h2>
 
 

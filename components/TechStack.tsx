@@ -3,16 +3,16 @@ const stacks = [
     category: "Programming",
     skills: [
       "Python",
-      "C++",
       "JavaScript",
+      "TypeScript",
     ],
   },
   {
     category: "AI / ML",
     skills: [
+        "OpenCV",
       "PyTorch",
       "Scikit-learn",
-      "NetworkX",
     ],
   },
   {
@@ -20,7 +20,8 @@ const stacks = [
     skills: [
       "Next.js",
       "React",
-      "Docker",
+      "FastAPI",
+      "Git / GitHub",
     ],
   },
   {
@@ -29,6 +30,7 @@ const stacks = [
       "Graph ML",
       "DOM Analysis",
       "LLM",
+      "AI Security",
     ],
   },
 ];
@@ -36,7 +38,7 @@ const stacks = [
 
 export default function TechStack() {
   return (
-    <section className="py-20">
+    <section className="px-4 md:px-10 py-20">
 
       <h2 className="text-3xl font-bold mb-10">
         Tech Stack

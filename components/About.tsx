@@ -1,5 +1,7 @@
 import Card from "./Card";
 import TechStack from "./TechStack";
+import MotionWrapper from "./animations/MotionWrapper";
+
 
 import {
     profile,
@@ -9,6 +11,7 @@ import {
 
 export default function About() {
   return (
+    <MotionWrapper>
     <section
       id="about"
       className="
@@ -16,7 +19,8 @@ export default function About() {
         flex
         flex-col
         justify-center
-        px-10
+        px-4 
+        md:px-10
         scroll-mt-20
       "
     >
@@ -26,7 +30,12 @@ export default function About() {
       </h2>
 
 
+<<<<<<< HEAD
       <div className="grid md:grid-cols-2 gap-6">
+=======
+      <div className="grid md:grid-cols-3 gap-6
+      ">
+>>>>>>> e7278207cb5130cad6f3b3885b819d10c7d68815
         {/* Profile */}
         <Card title="Profile">
             <p>
@@ -42,6 +51,48 @@ export default function About() {
             </p>
 
             </Card>
+
+            <Card title="Education">
+  <div className="space-y-8">
+
+    <div className="grid grid-cols-[120px_1fr] gap-6">
+      <div className="text-sm text-gray-500">
+        2025.3 – Present
+      </div>
+
+      <div>
+        <h3 className="font-medium">
+          M.S. in Computer and Software Engineering
+        </h3>
+
+        <p className="text-gray-600">
+          Hanyang University
+        </p>
+      </div>
+    </div>
+
+    <div className="grid grid-cols-[120px_1fr] gap-6">
+      <div className="text-sm text-gray-500">
+        2021.3 – 2025.2
+      </div>
+
+      <div>
+        <h3 className="font-medium">
+          B.S. in IT Media Engineering
+        </h3>
+
+        <p>
+          B.S. in Computer Engineering
+        </p>
+
+        <p className="text-gray-600">
+          Duksung Women's University
+        </p>
+      </div>
+    </div>
+
+  </div>
+</Card>
 
 
         <Card title="Research Interest">
@@ -64,5 +115,6 @@ export default function About() {
         <TechStack />
 
     </section>
+    </MotionWrapper>
   );
 }

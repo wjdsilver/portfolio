@@ -30,12 +30,9 @@ export default function About() {
       </h2>
 
 
-<<<<<<< HEAD
+
       <div className="grid md:grid-cols-2 gap-6">
-=======
-      <div className="grid md:grid-cols-3 gap-6
-      ">
->>>>>>> e7278207cb5130cad6f3b3885b819d10c7d68815
+      
         {/* Profile */}
         <Card title="Profile">
             <p>

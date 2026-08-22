@@ -6,13 +6,18 @@ import ProjectContributions from "@/components/project-detail/ProjectContributio
 import ProjectTroubleshooting from "@/components/project-detail/ProjectTroubleshooting";
 import ProjectLessons from "@/components/project-detail/ProjectLessons";
 import ProjectResources from "@/components/project-detail/ProjectResources";
+import ProjectAchievements from "@/components/project-detail/ProjectAchievements";
 import BackToProjects from "@/components/project-detail/BackToProjects";
 import ScrollToTop from "@/components/animations/ScrollToTop";
 import FloatingTOC from "@/components/project-detail/FloatingTOC";
 
 export default function DomPhishingPage() {
   return (
-    <main className="w-full min-w-0 overflow-x-hidden">
+    <main className="w-full min-w-0 overflow-x-hidden
+    bg-gradient-to-b
+      from-blue-50/40
+      via-white
+      to-white">
         <FloatingTOC
 
 sections={[
@@ -60,6 +65,7 @@ sections={[
         전동킥보드 이용자의 신원 확인과 안전 운행을 지원하는 서비스 프로토타입을 개발하였다.
         회원가입부터 대여, 운행, 반납 과정까지 사용자 인증 및 안전 검증 흐름을 설계하였다."
         image="/images/safet1.jpeg"
+        imageClassName="scale-[1.1]"
         conferences={[
             {
             name: "ACK 2024",
@@ -221,6 +227,17 @@ sections={[
         },
         ]}
         />
+
+<ProjectAchievements
+  achievements={[
+    {
+      title: "이브와 ICT 공모전 동상",
+      description:
+        "AI 기반 사용자 인증 및 안전 검증 기능을 구현한 전동킥보드 안전 시스템으로 동상을 수상하였다.",
+      image: "/images/projects/safet/safet-award.png",
+    },
+  ]}
+/>
 
         <ProjectResources
         resources={[

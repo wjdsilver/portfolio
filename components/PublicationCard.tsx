@@ -33,14 +33,16 @@ export default function PublicationCard({
 
     <div
       className="
+      rounded-xl
+      border 
+      border-indigo-50
+      bg-white
+      p-6
+      shadow-sm
       transition-all
-        duration-300
-        hover:-translate-y-1
-        hover:shadow-xl
-        bg-white
-        rounded-xl
-        shadow
-        p-6
+      duration-300
+      hover:-translate-y-1
+      hover:shadow-lg
       "
     >
 
@@ -62,7 +64,7 @@ export default function PublicationCard({
 
             {
                 author.highlight ? (
-                <strong>
+                <strong className="font-semibold text-indigo-800">
                     {author.name}
                 </strong>
                 ) : (
@@ -115,13 +117,15 @@ export default function PublicationCard({
             <a
               href={paper}
               className="
-                px-4
-                py-2
-                border
                 rounded-lg
-
-                transition
-                    hover:scale-105
+                border border-gray-200
+                bg-white
+                px-4 py-2
+                text-sm
+                font-medium
+                text-gray-700
+                transition-colors
+                hover:bg-indigo-300
               "
             >
               Paper PDF
@@ -136,14 +140,15 @@ export default function PublicationCard({
             <a
               href={code}
               className="
-                px-4
-                py-2
-                bg-black
-                text-white
                 rounded-lg
-
-                transition
-                    hover:scale-105
+                bg-indigo-900
+                px-4 py-2
+                text-sm
+                font-medium
+                text-white
+                shadow-sm
+                transition-colors
+                hover:bg-indigo-700
               "
             >
               Code

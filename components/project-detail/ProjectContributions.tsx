@@ -47,15 +47,12 @@ export default function ProjectContributions({
               key={item.title}
               className="
                 rounded-2xl
-                border
-                border-gray-200
 
                 bg-white
 
-                p-7
+                p-6
 
-                shadow-sm
-
+                shadow
 
                 transition-all
                 duration-300
@@ -80,8 +77,8 @@ export default function ProjectContributions({
 
                   rounded-full
 
-                  bg-blue-50
-                  text-blue-700
+                  bg-indigo-50
+                  text-indigo-800
 
                   font-semibold
                 "

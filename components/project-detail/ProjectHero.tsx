@@ -6,9 +6,11 @@ import MotionWrapper from "../animations/MotionWrapper";
 function HeroImage({
   image,
   title,
+  imageClassName = "",
 }: {
   image: string;
   title: string;
+  imageClassName?: string;
 }) {
   return (
     <div
@@ -20,10 +22,10 @@ function HeroImage({
       "
     >
       <img
-        src={image}
-        alt={title}
-        className="w-full h-full object-cover"
-      />
+  src={image}
+  alt={title}
+  className={`block w-full h-full object-cover object-center ${imageClassName}`}
+/>
     </div>
   );
 }
@@ -39,6 +41,7 @@ type ProjectHeroProps = {
   duration: string;
   description: string;
   image?: string;
+  imageClassName?: string;
 
   conferences: Conference[];
 
@@ -51,12 +54,13 @@ export default function ProjectHero({
   duration,
   description,
   image,
+  imageClassName,
   conferences,
   techStack,
 }: ProjectHeroProps) {
   return (
     <MotionWrapper>
-      <section className="max-w-6xl mx-auto px-8 pt-2 pb-24">
+      <section className="max-w-6xl mx-auto px-8 pt-2 pb-24 ">
 
         {/* Main Content */}
 
@@ -65,7 +69,7 @@ export default function ProjectHero({
             mt-10
             grid
             ${image ? "lg:grid-cols-2 gap-14" : "grid-cols-1"}
-            items-center
+            items-start
           `}
         >
 
@@ -73,7 +77,7 @@ export default function ProjectHero({
 
           <div>
 
-            <p className="text-blue-700 font-semibold tracking-wide uppercase">
+            <p className="text-indigo-800 font-semibold tracking-wide uppercase">
               {category}
             </p>
 
@@ -100,6 +104,7 @@ export default function ProjectHero({
                 <HeroImage
                   image={image}
                   title={title}
+                  imageClassName={imageClassName}
                 />
               </div>
             )}
@@ -125,12 +130,12 @@ export default function ProjectHero({
                       px-4
                       py-2
                       rounded-full
-                      bg-blue-50
-                      text-blue-700
+                      bg-indigo-50
+                      text-indigo-800
                       text-sm
                       transition-all
                       duration-300
-                      hover:bg-blue-100
+                      hover:bg-indigo-100
                       hover:-translate-y-0.5
                     "
                   >
@@ -143,8 +148,8 @@ export default function ProjectHero({
                       px-4
                       py-2
                       rounded-full
-                      bg-blue-50
-                      text-blue-700
+                      bg-indigo-50
+                      text-indigo-800
                       text-sm
                     "
                   >
@@ -172,8 +177,8 @@ export default function ProjectHero({
                       px-3
                       py-1.5
                       rounded-full
-                      border
-                      border-gray-200
+                      shadow
+                      bg-white
                       text-sm
                       transition-all
                       duration-300
@@ -197,6 +202,7 @@ export default function ProjectHero({
               <HeroImage
                 image={image}
                 title={title}
+                imageClassName={imageClassName}
               />
             </div>
           )}

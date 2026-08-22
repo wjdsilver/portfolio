@@ -38,13 +38,11 @@ export default function ProjectArchitecture({
 {pipeline && (
         <div
           className="
-            rounded-2xl
-            border
-            border-gray-200
+            rounded-xl
+            shadow
             bg-white
             p-6
 
-            shadow-sm
 
             transition-all
             duration-300
@@ -65,7 +63,7 @@ export default function ProjectArchitecture({
 
 
           <h3 className="text-2xl font-semibold mb-8">
-            Research Pipeline
+            연구 과정
           </h3>
 
 
@@ -85,14 +83,10 @@ export default function ProjectArchitecture({
               <div
                 key={step.title}
                 className="
-                  rounded-2xl
-                  border
-                  border-gray-200
+                  rounded-xl
+                  shadow
                   bg-white
-
                   p-6
-
-                  shadow-sm
 
 
                   transition-all
@@ -118,8 +112,8 @@ export default function ProjectArchitecture({
 
                     rounded-full
 
-                    bg-blue-50
-                    text-blue-700
+                    bg-indigo-50
+                    text-indigo-800
 
                     font-semibold
                   "

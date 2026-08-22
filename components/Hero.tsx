@@ -47,10 +47,16 @@ export default function Hero() {
         <a
           href="#projects"
           className="
+            rounded-xl
+            border border-indigo-100
+            bg-white
             px-6 py-3
-            bg-black
-            text-white
-            rounded-lg
+            text-sm
+            font-medium
+            text-gray-700
+            shadow
+            transition-colors
+            hover:bg-blue-100/50 
           "
         >
           프로젝트 보기
@@ -59,10 +65,19 @@ export default function Hero() {
 
         <a
           href="https://github.com/wjdsilver"
+          target="_blank"
+          rel="noopener noreferrer"
           className="
+            rounded-xl
+            border border-indigo-100
+            bg-white
             px-6 py-3
-            border
-            rounded-lg
+            text-sm
+            font-medium
+            text-gray-700
+            shadow
+            transition-colors
+            hover:bg-blue-100/50
           "
         >
           GitHub

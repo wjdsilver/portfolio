@@ -50,7 +50,7 @@ export default function TechStack() {
         {stacks.map((stack) => (
           <div key={stack.category}>
 
-            <h3 className="text-lg font-semibold mb-4">
+            <h3 className="mb-3 text-sm font-medium uppercase tracking-wide text-gray-500">
               {stack.category}
             </h3>
 
@@ -59,23 +59,21 @@ export default function TechStack() {
 
               {stack.skills.map((skill)=>(
                 <span
-                  key={skill}
-                  className="
-                    px-4
-                    py-2
-                    rounded-full
-                    bg-gray-100
-                    text-gray-800
-                    text-sm
-                    font-medium
-                    border
-                    hover:bg-black
-                    hover:text-white
-                    transition
-                  "
-                >
-                  {skill}
-                </span>
+                key={skill}
+                className="
+                  rounded-full
+                  shadow
+                  border
+                  border-indigo-50
+                  bg-white
+                  px-4 py-2
+                  text-sm
+                  font-medium
+                  text-gray-700
+                "
+              >
+                {skill}
+              </span>
               ))}
 
             </div>

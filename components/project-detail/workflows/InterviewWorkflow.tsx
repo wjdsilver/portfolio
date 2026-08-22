@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import MotionWrapper from "@/components/animations/MotionWrapper";
 import {
   Briefcase,
@@ -111,7 +112,7 @@ function WorkflowCard({
   }[];
 }) {
   return (
-    <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
+    <div className="rounded-xl bg-white p-6 shadow">
 
       <h3 className="text-2xl font-semibold mb-8">
         {title}
@@ -119,61 +120,49 @@ function WorkflowCard({
 
       <div className="flex flex-wrap items-center justify-center gap-4">
 
-        {steps.map((step, index) => (
-          <>
-            <div
-              key={step.title}
-              id="workflow"
-              className="
-                w-52
-                h-56
+      {steps.map((step, index) => (
+  <Fragment key={step.title}>
+    <div
+      className="
+        w-52
+        h-56
+        rounded-xl
+        p-6
+        shadow
+        flex
+        flex-col
+        justify-center
+        items-center
+        text-center
+        transition-all
+        duration-300
+        hover:-translate-y-1
+        hover:shadow-lg
+      "
+    >
+      <div className="mb-4 text-indigo-800">
+        <step.icon
+          size={42}
+          strokeWidth={1.8}
+        />
+      </div>
 
-                rounded-xl
-                border
-                border-gray-200
-                p-5
+      <h4 className="font-semibold text-lg">
+        {step.title}
+      </h4>
 
-                flex
-                flex-col
-                justify-center
-                items-center
+      <p className="mt-3 text-sm text-gray-600 leading-6">
+        {step.description}
+      </p>
+    </div>
 
-                text-center
-
-                transition-all
-                duration-300
-                hover:-translate-y-1
-                hover:shadow-lg
-              "
-            >
-              <div
-                className="
-                    mb-4
-                    text-blue-700
-                "
-                >
-                <step.icon
-                    size={42}
-                    strokeWidth={1.8}
-                />
-                </div>
-
-              <h4 className="font-semibold text-lg">
-                {step.title}
-              </h4>
-
-              <p className="mt-3 text-sm text-gray-600 leading-6">
-                {step.description}
-              </p>
-            </div>
-
-            {index !== steps.length - 1 && (
-              <div className="text-2xl text-blue-600 font-bold">
-                →
-              </div>
-            )}
-          </>
-        ))}
+    {index !== steps.length - 1 && (
+      <div className="text-2xl text-indigo-800 font-bold">
+        →
+      </div>
+    )}
+  </Fragment>
+))}
 
       </div>
     </div>

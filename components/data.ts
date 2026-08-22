@@ -11,6 +11,11 @@ export const researchInterests = [
   "Applied AI"
 ];
 
+export const languagesAndCertifications = [
+  "TOEIC 925",
+  "OPIc IH",
+];
+
 
 export const skills = [
   "Python",

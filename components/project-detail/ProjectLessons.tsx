@@ -44,15 +44,13 @@ export default function ProjectLessons({
             <div
               key={lesson.title}
               className="
-                rounded-2xl
-                border
-                border-gray-200
+                rounded-xl
 
                 bg-white
 
-                p-8
+                p-6
 
-                shadow-sm
+                shadow
 
                 transition-all
                 duration-300
@@ -84,8 +82,8 @@ export default function ProjectLessons({
 
                     rounded-full
 
-                    bg-blue-50
-                    text-blue-700
+                    bg-indigo-50
+                    text-indigo-800
 
                     font-semibold
                   "

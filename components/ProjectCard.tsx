@@ -69,7 +69,7 @@ export default function ProjectCard({ project }: Props) {
                   text-2xl
                   font-bold
                   transition-colors
-                  group-hover:text-blue-600
+                  group-hover:text-indigo-800
                 "
               >
                 {project.title}
@@ -121,8 +121,8 @@ export default function ProjectCard({ project }: Props) {
                         px-3
                         py-1
                         rounded-full
-                        bg-blue-50
-                        text-blue-700
+                        bg-indigo-50
+                        text-indigo-800
                         text-sm
                       "
                     >
@@ -218,7 +218,7 @@ export default function ProjectCard({ project }: Props) {
                     rel="noopener noreferrer"
                     className="
                       text-sm
-                      text-blue-600
+                      text-indigo-800
                       hover:underline
                     "
                   >

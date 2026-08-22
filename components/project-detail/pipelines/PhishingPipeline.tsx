@@ -155,7 +155,7 @@ export default function PhishingPipeline() {
         </div>
         <div className="w-[110px] h-[130px] border-2 border-[#2B72B9] rounded-xl bg-[#F0F6FF] flex flex-col items-center justify-center p-2 gap-2 shadow-sm">
           {/* Phishing Badge */}
-          <div className="flex items-center justify-between w-[88%] px-2 py-1.5 rounded-full text-[11px] font-semibold bg-blue-600 text-white">
+          <div className="flex items-center justify-between w-[88%] px-2 py-1.5 rounded-full text-[11px] font-semibold bg-blue-700 text-white">
             <span>Phishing</span>
             <svg className="w-3.5 h-3.5" viewBox="0 0 16 16" fill="currentColor">
               <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />

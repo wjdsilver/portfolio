@@ -23,7 +23,7 @@ export default function BackToProjects() {
           transition-colors
           duration-300
 
-          hover:text-blue-700
+          hover:text-indigo-800
           hover:-translate-x-1
         "
       >

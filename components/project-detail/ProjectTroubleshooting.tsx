@@ -42,15 +42,13 @@ export default function ProjectTroubleshooting({
             <div
               key={index}
               className="
-                rounded-2xl
-                border
-                border-gray-200
+                rounded-xl
 
                 bg-white
 
                 p-8
 
-                shadow-sm
+                shadow
 
 
                 transition-all
@@ -83,8 +81,8 @@ export default function ProjectTroubleshooting({
 
                     rounded-full
 
-                    bg-blue-50
-                    text-blue-700
+                    bg-indigo-50
+                    text-indigo-800
 
                     font-semibold
                   "
@@ -120,7 +118,7 @@ export default function ProjectTroubleshooting({
 
                   <p
                     className="
-                      text-blue-700
+                      text-indigo-800
                       font-semibold
                       mb-2
                     "
@@ -143,7 +141,7 @@ export default function ProjectTroubleshooting({
 
                   <p
                     className="
-                      text-blue-700
+                      text-indigo-800
                       font-semibold
                       mb-2
                     "
@@ -167,7 +165,7 @@ export default function ProjectTroubleshooting({
 
                   <p
                     className="
-                      text-blue-700
+                      text-indigo-800
                       font-semibold
                       mb-2
                     "
@@ -197,12 +195,13 @@ export default function ProjectTroubleshooting({
                     mt-8
                     pt-6
                     border-t
+                    border-gray-200
                   "
                 >
 
                   <p
                     className="
-                      text-blue-700
+                      text-indigo-800
                       font-semibold
                       mb-2
                     "

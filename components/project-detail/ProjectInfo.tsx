@@ -40,11 +40,9 @@ export default function ProjectInfo({
             key={item.label}
             className="
               rounded-2xl
-              border
-              border-gray-200
               bg-white
               p-6
-              shadow-sm
+              shadow
 
               transition-all
               duration-300

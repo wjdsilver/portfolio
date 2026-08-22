@@ -27,10 +27,9 @@ export default function ProjectAchievements({
           <div
             key={achievement.title}
             className="
-              rounded-2xl
-                border
-                border-gray-200
-              p-5
+              rounded-xl
+              shadow
+              p-6
               bg-white
             "
           >

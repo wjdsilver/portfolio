@@ -54,7 +54,7 @@ export default function FloatingTOC({
             h-2.5
             rounded-full
             bg-gray-300
-            hover:bg-blue-700
+            hover:bg-indigo-600
             hover:scale-125
             transition-all
             duration-200
@@ -109,7 +109,7 @@ export default function FloatingTOC({
                   block
                   text-sm
                   text-gray-500
-                  hover:text-blue-700
+                  hover:text-indigo-600
                   transition
                 "
               >

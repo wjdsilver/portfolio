@@ -68,14 +68,12 @@ export default function ProjectResults({
             <div
               key={metric.name}
               className="
-                rounded-2xl
-                border
-                border-gray-200
+                rounded-xl
 
                 bg-white
                 p-7
                 text-center
-                shadow-sm
+                shadow
 
                 transition-all
                 duration-300
@@ -95,6 +93,7 @@ export default function ProjectResults({
                   mt-3
                   text-4xl
                   font-bold
+                  text-indigo-800
                 "
               >
                 {metric.value}
@@ -120,6 +119,7 @@ export default function ProjectResults({
                 text-2xl
                 font-semibold
                 mb-6
+
               "
             >
               성능 비교
@@ -130,25 +130,22 @@ export default function ProjectResults({
               className="
                 overflow-x-auto
 
-rounded-2xl
+                rounded-xl
 
-border
-border-gray-200
+                bg-white
 
-bg-white
+                shadow
 
-shadow-sm
+                transition-all
+                duration-300
 
-transition-all
-duration-300
-
-hover:shadow-xl
+                hover:shadow-xl
               "
             >
 
               <table className="w-full">
 
-                <thead className="bg-gray-50
+                <thead className="bg-indigo-50/50
                 border-b
     border-gray-200">
 
@@ -243,8 +240,7 @@ hover:shadow-xl
               className="
                 rounded-2xl
 
-  border
-  border-gray-200
+
 
   bg-white
 

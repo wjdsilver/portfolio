@@ -16,28 +16,20 @@ export default function Card({
   return (
     <div
       className="
+        rounded-2xl
         bg-white
-        rounded-xl
-        shadow
         p-6
-
-        transition-all
-duration-300
-hover:-translate-y-1
-hover:shadow-xl
+        shadow
+        transition-all duration-300
+        hover:-translate-y-1
+        hover:shadow-xl
       "
     >
-
-      <h3 className="text-2xl font-bold">
+      <h3 className="mb-6 text-sm font-medium uppercase tracking-wider text-gray-500">
         {title}
       </h3>
 
-
-      <div className="mt-4">
-        {children}
-      </div>
-
-
+      {children}
     </div>
   );
 }

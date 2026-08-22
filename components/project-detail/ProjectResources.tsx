@@ -61,14 +61,12 @@ export default function ProjectResources({
 
               className="
                 rounded-2xl
-                border
-                border-gray-200
 
                 bg-white
 
                 p-6
 
-                shadow-sm
+                shadow
 
                 transition-all
                 duration-300
@@ -90,8 +88,8 @@ export default function ProjectResources({
 
                   rounded-full
 
-                  bg-blue-50
-                  text-blue-700
+                  bg-indigo-50
+                  text-indigo-500
 
                   font-bold
                 "
@@ -129,7 +127,7 @@ export default function ProjectResources({
                 className="
                   mt-5
                   text-sm
-                  text-blue-700
+                  text-indigo-700
                   font-medium
                 "
               >

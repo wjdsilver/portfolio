@@ -6,13 +6,18 @@ export default function Navbar() {
         top-0
         left-0
         w-full
-        bg-white/80
-        backdrop-blur
+        
         px-3
         py-4
         md:px-10
         md:py-5
         z-50
+        fixed
+        
+        bg-white/60
+        backdrop-blur-md
+        border-t
+        border-indigo-50/70
       "
     >
       <div

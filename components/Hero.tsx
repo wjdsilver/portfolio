@@ -53,10 +53,10 @@ export default function Hero() {
             px-6 py-3
             text-sm
             font-medium
-            text-gray-700
-            shadow
+            text-indigo-800
+            shadow-sm
             transition-colors
-            hover:bg-blue-100/50 
+            hover:bg-indigo-50
           "
         >
           프로젝트 보기
@@ -74,10 +74,10 @@ export default function Hero() {
             px-6 py-3
             text-sm
             font-medium
-            text-gray-700
-            shadow
+            text-indigo-800
+            shadow-sm
             transition-colors
-            hover:bg-blue-100/50
+            hover:bg-indigo-50
           "
         >
           GitHub

@@ -117,15 +117,16 @@ export default function PublicationCard({
             <a
               href={paper}
               className="
-                rounded-lg
-                border border-gray-200
+                rounded-xl
+                border border-indigo-100
                 bg-white
                 px-4 py-2
                 text-sm
                 font-medium
-                text-gray-700
+                text-indigo-800
+                shadow-sm
                 transition-colors
-                hover:bg-indigo-300
+                hover:bg-indigo-50
               "
             >
               Paper PDF
@@ -140,8 +141,8 @@ export default function PublicationCard({
             <a
               href={code}
               className="
-                rounded-lg
-                bg-indigo-900
+                rounded-xl
+                bg-indigo-800
                 px-4 py-2
                 text-sm
                 font-medium

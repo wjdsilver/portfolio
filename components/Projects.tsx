@@ -36,7 +36,7 @@ const projects: Project[] = [
     links: [
     {
       label: "논문",
-      url: "https://github.com/user-attachments/files/29327766/KCC2026_15_505_DOM.Graph.Feature.Phishing.pdf",
+      url: "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12929706",
     },
     {
       label: "코드",
@@ -84,7 +84,7 @@ const projects: Project[] = [
   links: [
     {
       label: "논문",
-      url: "https://www.manuscriptlink.com/society/kips/conference/ack2024/file/downloadSoConfManuscript/abs/KIPS_C2024B0165",
+      url: "https://doi.org/10.3745/PKIPS.y2024m10a.1043",
     },
     {
       label: "코드",

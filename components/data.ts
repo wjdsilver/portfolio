@@ -114,7 +114,7 @@ export const publications = [
     description:
 "웹페이지의 HTML 구조를 DOM 그래프로 표현하고 Weisfeiler-Lehman Subtree 특징을 추출하여 피싱 웹페이지의 구조적 패턴을 학습하고 탐지하는 방법을 제안했습니다.",
     paper:
-      "https://github.com/user-attachments/files/29327766/KCC2026_15_505_DOM.Graph.Feature.Phishing.pdf",
+      "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12929706",
 
     code:
       "https://github.com/wjdsilver/phishing-dom-wl-kcc2026"

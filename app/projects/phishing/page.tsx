@@ -361,7 +361,7 @@ resources={[
     title: "Conference Paper",
     description:
       "DOM Graph 기반 피싱 탐지 연구 논문",
-    url: "#",
+    url: "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12929706",
   },
 
 

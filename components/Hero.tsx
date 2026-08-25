@@ -57,6 +57,9 @@ export default function Hero() {
             shadow-sm
             transition-colors
             hover:bg-indigo-50
+            inline-flex
+items-center
+justify-center
           "
         >
           프로젝트 보기
@@ -78,6 +81,9 @@ export default function Hero() {
             shadow-sm
             transition-colors
             hover:bg-indigo-50
+            inline-flex
+items-center
+justify-center
           "
         >
           GitHub

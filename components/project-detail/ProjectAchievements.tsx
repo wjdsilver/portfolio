@@ -56,8 +56,8 @@ export default function ProjectAchievements({
                   height={1100}
                   className="
                     mx-auto
-                    max-w-2xl
-                    rounded-xl
+                    w-full
+                    max-w-sm
                     border
                   "
                 />

@@ -315,7 +315,7 @@ issues={[
       title: "KCC 2026 우수발표논문상",
       description:
         "DOM Graph 기반 피싱 웹페이지 탐지 연구의 발표 성과를 인정받아 KCC 2026 우수발표논문상을 수상하였다.",
-      image: "/images/projects/phishing/kcc-award.png",
+      image: "/images/KCC_award.jpg",
     },
   ]}
 />

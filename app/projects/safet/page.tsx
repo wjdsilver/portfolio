@@ -234,7 +234,7 @@ sections={[
       title: "이브와 ICT 공모전 동상",
       description:
         "AI 기반 사용자 인증 및 안전 검증 기능을 구현한 전동킥보드 안전 시스템으로 동상을 수상하였다.",
-      image: "/images/projects/safet/safet-award.png",
+      image: "/images/ibwa_award.jpg",
     },
   ]}
 />

@@ -149,10 +149,10 @@ export const publications = [
     ],
 
     venue:
-      "ACK (31권 2호)",
+      "ACK",
 
     year:
-      "2024",
+      "2024 (31권 2호)",
       status: "현장 포스터 발표",
 
     description:

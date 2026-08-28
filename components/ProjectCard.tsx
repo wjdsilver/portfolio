@@ -164,32 +164,6 @@ export default function ProjectCard({ project }: Props) {
                   </span>
                 ))}
               </div>
-
-              {/* View Project */}
-              <div
-                className="
-                  mt-8
-                  flex
-                  justify-end
-                  items-center
-                  gap-2
-                  text-sm
-                  font-semibold
-                  text-indigo-800
-                "
-              >
-                <span>View Project</span>
-
-                <span
-                  className="
-                    transition-transform
-                    duration-300
-                    group-hover:translate-x-1
-                  "
-                >
-                  →
-                </span>
-              </div>
             </div>
 
             {/* Image */}
@@ -218,6 +192,33 @@ export default function ProjectCard({ project }: Props) {
               </div>
             )}
           </div>
+          
+          {/* View Project */}
+              <div
+                className="
+                  mt-8
+                  flex
+                  justify-end
+                  items-center
+                  gap-2
+                  text-sm
+                  font-semibold
+                  text-indigo-800
+                "
+              >
+                <span>View Project</span>
+
+                <span
+                  className="
+                    transition-transform
+                    duration-300
+                    group-hover:translate-x-1
+                  "
+                >
+                  →
+                </span>
+              </div>
+            
         </Link>
 
         {/* Resources */}
@@ -252,8 +253,10 @@ export default function ProjectCard({ project }: Props) {
                   </a>
                 ))}
               </div>
+
             </div>
           </div>
+
         )}
       </div>
     </MotionWrapper>

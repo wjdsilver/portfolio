@@ -170,6 +170,7 @@ export default function ProjectCard({ project }: Props) {
                 className="
                   mt-8
                   flex
+                  justify-end
                   items-center
                   gap-2
                   text-sm

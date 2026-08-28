@@ -49,21 +49,20 @@ export default function ProjectCard({ project }: Props) {
             block
             p-8
             cursor-pointer
+            active:scale-[0.99]
           "
         >
           <div
             className={`
-                flex
-                ${project.image ? "flex-col-reverse md:flex-row" : "flex-col"}
-                gap-6
-                md:gap-10
-                items-start
+              flex
+              ${project.image ? "flex-col-reverse md:flex-row" : "flex-col"}
+              gap-6
+              md:gap-10
+              items-start
             `}
-            >
-
+          >
             {/* Left */}
             <div className="w-full flex-1">
-
               <h3
                 className="
                   text-2xl
@@ -82,10 +81,7 @@ export default function ProjectCard({ project }: Props) {
               {/* Description */}
               <ul className="mt-6 space-y-2">
                 {project.description.map((item) => (
-                  <li
-                    key={item}
-                    className="text-gray-700"
-                  >
+                  <li key={item} className="text-gray-700">
                     • {item}
                   </li>
                 ))}
@@ -100,10 +96,7 @@ export default function ProjectCard({ project }: Props) {
 
                   <ul className="space-y-2">
                     {project.contribution.map((item) => (
-                      <li
-                        key={item}
-                        className="text-gray-700"
-                      >
+                      <li key={item} className="text-gray-700">
                         ✓ {item}
                       </li>
                     ))}
@@ -171,25 +164,58 @@ export default function ProjectCard({ project }: Props) {
                   </span>
                 ))}
               </div>
+
+              {/* View Project */}
+              <div
+                className="
+                  mt-8
+                  flex
+                  items-center
+                  gap-2
+                  text-sm
+                  font-semibold
+                  text-indigo-800
+                "
+              >
+                <span>View Project</span>
+
+                <span
+                  className="
+                    transition-transform
+                    duration-300
+                    group-hover:translate-x-1
+                  "
+                >
+                  →
+                </span>
+              </div>
             </div>
 
             {/* Image */}
             {project.image && (
-            <div className="relative w-full md:w-1/3 aspect-[16/9] overflow-hidden rounded-xl">
-                <Image
-                src={project.image}
-                alt={project.title}
-                fill
+              <div
                 className="
+                  relative
+                  w-full
+                  md:w-1/3
+                  aspect-[16/9]
+                  overflow-hidden
+                  rounded-xl
+                "
+              >
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="
                     object-cover
                     transition-transform
                     duration-500
                     group-hover:scale-105
-                "
+                  "
                 />
-            </div>
+              </div>
             )}
-
           </div>
         </Link>
 
@@ -197,7 +223,6 @@ export default function ProjectCard({ project }: Props) {
         {project.links && (
           <div className="px-8 pb-8">
             <div className="pt-6 border-t">
-
               <p
                 className="
                   text-sm
@@ -226,7 +251,6 @@ export default function ProjectCard({ project }: Props) {
                   </a>
                 ))}
               </div>
-
             </div>
           </div>
         )}

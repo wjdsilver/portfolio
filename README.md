@@ -169,7 +169,7 @@ Server Component와 Client Component의 역할을 구분하고 애니메이션 �
 
 # 👩🏻‍💻 Author
 
-**Jungeun Kim**
+
 
 M.S. Student in Computer Software Engineering
 

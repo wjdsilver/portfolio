@@ -25,7 +25,7 @@ export default function ProjectInfo({
       value: status,
     },
     {
-      label: "연구형태",
+      label: "팀 구성",
       value: team,
     },
   ];

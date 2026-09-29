@@ -14,26 +14,41 @@ type Comparison = {
   f1: string;
 };
 
+type AdditionalResult = {
+  title: string;
+  description: string;
+  metrics: Metric[];
+};
 
 type ProjectResultsProps = {
+  title?: string;
+
+  description?: string;
+
   metrics: Metric[];
 
   comparisons?: Comparison[];
 
   confusionMatrixImage?: string;
+
+  additionalResult?: AdditionalResult;
 };
 
 
 export default function ProjectResults({
+  title,
+  description,
   metrics,
   comparisons = [],
   confusionMatrixImage,
+  additionalResult,
 }: ProjectResultsProps) {
 
   return (
     <MotionWrapper>
 
       <section
+      id="results"
         className="
           max-w-6xl
           mx-auto
@@ -51,6 +66,29 @@ export default function ProjectResults({
         >
           결과 및 성능
         </h2>
+        {description && (
+  <div className="mb-10">
+    <h3
+      className="
+        text-2xl
+        font-semibold
+        mb-3
+      "
+    >
+      {title}
+    </h3>
+
+    <p
+      className="
+        text-gray-600
+        leading-7
+        mb-10
+      "
+    >
+      {description}
+    </p>
+  </div>
+)}
 
 
         {/* Metrics */}
@@ -265,7 +303,81 @@ export default function ProjectResults({
 
         )}
 
+      {/* Additional Result */}
 
+{additionalResult && (
+  <div className="mt-16">
+
+    <h3
+      className="
+        text-2xl
+        font-semibold
+        mb-3
+      "
+    >
+      {additionalResult.title}
+    </h3>
+
+    <p
+      className="
+        text-gray-600
+        leading-7
+        mb-8
+      "
+    >
+      {additionalResult.description}
+    </p>
+
+    <div
+      className="
+        grid
+        md:grid-cols-3
+        gap-6
+      "
+    >
+
+      {additionalResult.metrics.map((metric) => (
+
+        <div
+          key={metric.name}
+          className="
+            rounded-xl
+            bg-white
+            p-7
+            text-center
+            shadow
+
+            transition-all
+            duration-300
+
+            hover:-translate-y-1
+            hover:shadow-xl
+          "
+        >
+
+          <p className="text-gray-500">
+            {metric.name}
+          </p>
+
+          <p
+            className="
+              mt-3
+              text-4xl
+              font-bold
+              text-indigo-800
+            "
+          >
+            {metric.value}
+          </p>
+
+        </div>
+
+      ))}
+
+    </div>
+
+  </div>
+)}
       </section>
 
 

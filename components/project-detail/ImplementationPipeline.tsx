@@ -23,7 +23,9 @@ export default function ProjectArchitecture({
   return (
     <MotionWrapper>
 
-      <section className="max-w-6xl mx-auto px-8 py-20">
+      <section 
+      id="pipeline"
+      className="max-w-6xl mx-auto px-8 py-20">
 
 
         {/* Title */}
@@ -62,7 +64,7 @@ export default function ProjectArchitecture({
         <div className="mt-16">
 
 
-          <h3 className="text-2xl font-semibold mb-8">
+          <h3 className="text-3xl font-semibold mb-8">
             연구 과정
           </h3>
 

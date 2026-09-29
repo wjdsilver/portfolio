@@ -17,53 +17,12 @@ export const languagesAndCertifications = [
 ];
 
 
-export const skills = [
-  "Python",
-  "PyTorch",
-  "NetworkX",
-  "Next.js"
-];
-
-
-export const techStack = [
-  {
-    category: "AI / ML",
-    skills: [
-      "Python",
-      "PyTorch",
-      "Scikit-learn",
-      "NetworkX"
-    ]
-  },
-
-  {
-    category: "Web",
-    skills: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS"
-    ]
-  },
-
-  {
-    category: "Tools",
-    skills: [
-      "Git",
-      "Docker",
-      "VS Code"
-    ]
-  }
-];
-
-
-
 
 export const publications = [
   {
     slug:"phishing",
     title:
-      "Structural Phishing Detection Using Weisfeiler-Lehman Subtree Features on DOM Graphs",
+      "Do Structural Phishing Patterns Generalize to LLM-Generated Webpages?",
 
     authors: [
         {
@@ -77,14 +36,14 @@ export const publications = [
     ],
 
     venue:
-      "ICONIP",
+      "International Conference on Neural Information Processing (ICONIP)",
 
       year: "2026",
 
       status: "초록 발표 채택 · 현장 포스터 발표 예정",
   
       description:
-        "Investigates structural phishing detection using Weisfeiler-Lehman subtree features on DOM graphs, with a focus on comparing human-crafted and LLM-generated phishing webpages.",
+        "앞선 연구에서 학습한 DOM Graph의 구조적 특징이 LLM이 생성한 피싱 웹페이지에도 일반화될 수 있는지 연구했습니다. WL Subtree Feature를 활용해 실제 피싱 웹페이지로 모델을 학습하고 LLM 생성 피싱 웹페이지를 대상으로 평가했으며, 0.995의 phishing recall을 달성했습니다.",
   
       
   },
@@ -112,7 +71,7 @@ export const publications = [
     award: "우수발표논문상",
 
     description:
-"웹페이지의 HTML 구조를 DOM 그래프로 표현하고 Weisfeiler-Lehman Subtree 특징을 추출하여 피싱 웹페이지의 구조적 패턴을 학습하고 탐지하는 방법을 제안했습니다.",
+ "웹페이지의 HTML 구조를 DOM Graph로 표현하고, WL Subtree Feature를 활용해 피싱 웹페이지의 구조적 특징을 학습하고 탐지하는 방법을 연구했습니다. 실제 피싱 웹페이지를 대상으로 다양한 Feature를 비교·평가했으며, 최고 96.19%의 Accuracy를 달성했습니다.",
     paper:
       "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12929706",
 

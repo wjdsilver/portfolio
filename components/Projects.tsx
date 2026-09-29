@@ -9,20 +9,22 @@ const projects: Project[] = [
         "DOM 트리를 그래프로 변환하여 웹페이지 구조 표현",
         "WL Subtree 기반 구조 특징 추출",
         "Random Forest를 이용한 피싱 웹페이지 분류",
+        "LLM 생성 피싱 웹페이지를 대상으로 구조적 특징의 일반화 가능성 검증",
     ],
     contribution: [
-        "DOM 구조 기반 그래프 생성 파이프라인 설계 및 구현",
-        "WL Subtree 구조 특징 추출 알고리즘 구현",
-        "Random Forest 기반 성능 평가 및 실험 수행",
+        "DOM 구조 기반 Graph 생성 및 Feature Extraction 파이프라인 설계·구현",
+        "WL Subtree 기반 구조적 특징 추출 및 Random Forest 활용한 피싱 분류 실험",
+        "실제 피싱 웹페이지와 다양한 Feature를 활용한 성능 비교·분석",
+        "LLM 생성 피싱 웹페이지 데이터셋을 구축하고 기존 탐지 모델의 일반화 성능 평가",
     ],
 
     conferences: [
-      "KCC2026",
-      "ICONIP2026(Accepted)",
+      "KCC 2026",
+      "ICONIP 2026 (Accepted)",
     ],
     achievements: [
-    "KCC2026 우수발표논문상",
-    "KCC2026 한국 정보과학회 학술발표논문집 논문 게재",
+    "KCC 2026 우수발표논문상",
+    "KCC 2026 한국 정보과학회 학술발표논문집 논문 게재",
   ],
     technologies: [
       "Python",
@@ -42,10 +44,6 @@ const projects: Project[] = [
       label: "코드",
       url: "https://github.com/wjdsilver/phishing-dom-wl-kcc2026",
     },
-    {
-      label: "포스터",
-      url: "https://private-user-images.githubusercontent.com/104892553/612933443-c38c7e2a-c5ac-4980-b180-bf82d1205fe7.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODcxOTU3OTAsIm5iZiI6MTc4NzE5NTQ5MCwicGF0aCI6Ii8xMDQ4OTI1NTMvNjEyOTMzNDQzLWMzOGM3ZTJhLWM1YWMtNDk4MC1iMTgwLWJmODJkMTIwNWZlNy5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwODIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDgyMFQwMzExMzBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jMzllZDllYWEyMzEzNzA1YWQ4MjU4MmJhMDQ3NWFjOGNjYTBiOTIxYWZkNDRmNzc0NjYyNDY0ZWQ3MDEwMjUwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZqcGVnIn0.GB9ZSOKJODiJI1dWbqakOE88QAsgp8SEO-TF1cTQWiI",
-    },
     ],
   },
 
@@ -56,21 +54,21 @@ const projects: Project[] = [
   image: "/images/safet1.jpeg",
   category: "AI · 컴퓨터 비전",
   description: [
-        "얼굴 인식을 통한 사용자 인증",
+        "AI 기반 전동킥보드 사용자 본인 인증",
         "YOLOv8 기반 안전모 착용 및 다인 탑승 탐지",
         "주행 환경 분석을 통한 안전 운행 지원",
   ],
   contribution: [
-  "얼굴 인식 기반 사용자 인증 기능 개발",
-  "Face Recognition 모델을 활용한 동일인 판별 기능 구현",
-  "AI 기능과 시스템 연동 및 성능 검증",
+  "신분증 정보와 사용자 얼굴의 동일성 비교 기능 개발",
+  "Face Recognition 모델을 활용한 얼굴 특징 비교 및 동일인 판별 구현",
+  "Flutter 기반 사용자 인증 기능 및 화면 구현",
 ],
   conferences: [
-      "ACK2024",
+      "ACK 2024",
     ],
   achievements: [
     "2024 이브와 ICT멘토링 동상",
-    "ACK2024 학술발표대회 논문 게재",
+    "ACK 2024 학술발표대회 논문 게재",
   ],
   technologies: [
     "Python",
@@ -91,10 +89,6 @@ const projects: Project[] = [
       url: "https://github.com/safeT-CE",
     },
     {
-      label: "포스터",
-      url: "https://github.com/user-attachments/files/30528522/ACK.pdf",
-    },
-    {
       label: "동영상",
       url: "https://youtu.be/SRanw6_HfDg?si=4GFTbLj0-FNsLzbF",
     }
@@ -107,23 +101,24 @@ const projects: Project[] = [
     image: "/images/interview1.png",
     category: "AI · 컴퓨터 비전",
     description: [
-        "얼굴 랜드마크 기반 시선 추적",
-        "음성 특징 분석을 통한 면접 피드백 제공",
-        "AI 기반 면접 결과 리포트 생성",
+        "GPT API 기반 직무 맞춤형 면접 질문 생성 및 TTS 제공",
+        "STT와 GPT API를 활용한 답변 내용 및 음성적 잉여표현 분석",
+        "답변·음성·시선 분석 결과를 종합한 AI 면접 피드백 리포트 생성",
     ],
     contribution: [
-        "시선 추적 알고리즘 설계 및 구현",
-        "Face Landmark 기반 시선 분석 기능 개발",
-        "백엔드 API 연동 및 성능 검증",
+        "dlib 68-point Face Landmark 기반 시선 추적 기능 구현",
+        "캘리브레이션을 활용한 개인별 시선 영역 분석 로직 개발",
+        "Django REST Framework 기반 AI 분석 API 연동 및 결과 처리",
     ],
     achievements: [
-        "2024 이브와 ICT멘토링 입상",
+        "2024 이브와 ICT멘토링 참여",
     ],
     technologies: [
         "Python",
         "OpenCV",
         "dlib",
-        "Flask",
+        "django",
+        "Django Rest Framework"
     ],
     links: [
     {

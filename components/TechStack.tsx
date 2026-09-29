@@ -5,23 +5,32 @@ const stacks = [
       "Python",
       "JavaScript",
       "TypeScript",
+      "SQL",
+      "Dart",
     ],
   },
   {
     category: "AI / ML",
     skills: [
         "OpenCV",
+        "YOLOv8",
+        "dlib",
       "PyTorch",
       "Scikit-learn",
+      "NetworkX",
+      "Pandas",
+      "NumPy",
     ],
   },
   {
-    category: "Web / System",
+    category: "Web / App ",
     skills: [
       "Next.js",
       "React",
-      "FastAPI",
-      "Git / GitHub",
+      "Django", 
+      "Django REST Framework", 
+      "Flutter", 
+      "Tailwind CSS",
     ],
   },
   {
@@ -31,6 +40,23 @@ const stacks = [
       "DOM Analysis",
       "LLM",
       "AI Security",
+    ],
+  },
+  {
+    category: "Design / XR",
+    skills: [
+      "Figma",
+      "Unity",
+      "Unreal",
+      "Maya",
+    ],
+  },
+  {
+    category: "Tools",
+    skills: [
+      "Git / GitHub",
+      "Jira",
+      "Vercel",
     ],
   },
 ];

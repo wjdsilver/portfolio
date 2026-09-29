@@ -7,7 +7,6 @@ import {
     profile,
     researchInterests,
     languagesAndCertifications,
-    skills
 } from "./data";
 
 export default function About() {

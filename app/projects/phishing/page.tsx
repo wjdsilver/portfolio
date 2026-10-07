@@ -66,7 +66,7 @@ export default function DomPhishingPage() {
         category="AI 보안"
         title="DOM Graph 기반 피싱 웹페이지 탐지"
         duration="2026.02 – 현재"
-        description="피싱 웹페이지의 HTML에 존재하는 구조적 패턴에 주목하여, DOM Graph와 Weisfeiler-Lehman Subtree Feature를 활용한 구조 기반 피싱 탐지 방법을 연구했습니다. 나아가 LLM이 생성한 피싱 웹페이지로 연구를 확장하여, 실제 피싱 웹페이지에서 학습한 구조적 특징이 새로운 형태의 피싱에도 일반화될 수 있는지 검증했습니다."
+        description="피싱 웹페이지의 HTML 구조적 패턴을 Feature로 활용할 수 있는지 연구했습니다. DOM을 Graph로 표현하고 Weisfeiler-Lehman Subtree Feature를 적용해 구조 기반 탐지 방법을 설계했으며, 이후 LLM이 생성한 피싱 웹페이지로 연구를 확장해 실제 피싱에서 확인한 구조적 특징이 새로운 생성 환경에서도 일반화되는지 검증했습니다."
 
         conferences={[
           {
@@ -97,10 +97,10 @@ export default function DomPhishingPage() {
 
         <ProjectOverview
         paragraphs={[
-          '기존 피싱 웹페이지 탐지 방법이 URL 문자열이나 시각적·표면적 정보에 주로 의존한다는 점에 주목하여, 웹페이지의 HTML 구조 자체를 활용한 피싱 탐지 방법을 연구했습니다. HTML 문서를 DOM Graph로 표현하고 Weisfeiler-Lehman Subtree Feature를 추출하여, 피싱 웹페이지에 나타나는 구조적 패턴을 학습하고 Random Forest 기반으로 탐지했습니다.',
+          "기존 피싱 웹페이지 탐지 방법이 URL 문자열이나 시각적·표면적 정보에 주로 의존한다는 점에 주목하여, 웹페이지의 HTML 구조 자체를 활용한 피싱 탐지 방법을 연구했습니다. HTML 문서를 DOM Graph로 표현하고 Weisfeiler-Lehman Subtree Feature를 추출하여, 피싱 웹페이지에 나타나는 구조적 패턴을 학습하고 Random Forest 기반으로 탐지했습니다.",
 
-          '이후 연구를 LLM이 생성한 피싱 웹페이지로 확장했습니다. 실제 피싱 웹페이지만으로 학습한 모델을 LLM 생성 피싱 웹페이지에 적용하여, 학습된 구조적 특징이 새로운 형태의 피싱 페이지에서도 일반화될 수 있는지 검증했습니다. 이를 통해 실제 피싱 웹페이지에 대한 탐지 성능뿐만 아니라 생성형 AI 환경에서 구조 기반 탐지 방법의 일반화 가능성까지 분석했습니다.',
-        ]}
+    "이후 생성형 AI의 확산으로 피싱 웹페이지가 생성되는 방식 역시 변화할 수 있다는 점에 주목했습니다. 실제 피싱 웹페이지는 LLM 생성 여부를 확인하기 어렵기 때문에, 기존 데이터만으로는 LLM-generated phishing이라는 조건을 통제하여 검증하기 어려웠습니다. 따라서 6개 LLM과 8개 피싱 시나리오를 직접 지정하여 1,200개의 Synthetic Dataset을 구축하고, 실제 피싱 웹페이지에서 학습한 구조적 Feature가 새로운 생성 환경에서도 일반화될 수 있는지 검증했습니다.",
+  ]}
         />
 
         <ImplementationPipeline
@@ -112,7 +112,7 @@ export default function DomPhishingPage() {
   {
     title: "HTML Parsing",
     description:
-      "BeautifulSoup을 이용하여 HTML 문서를 분석하고 DOM 구조를 생성했습니다.",
+      "웹페이지의 구조적 관계를 활용하기 위해 BeautifulSoup으로 HTML 문서를 분석하고 DOM 구조를 생성했습니다.",
   },
 
   {
@@ -124,13 +124,13 @@ export default function DomPhishingPage() {
   {
     title: "Graph Conversion",
     description:
-      "구성한 DOM Tree를 NetworkX 기반 Graph 구조로 변환하여 웹페이지의 구조적 관계를 표현했습니다.",
+      "HTML Element 간의 부모-자식 관계를 보존하기 위해 DOM Tree를 NetworkX 기반 Graph로 변환하여 웹페이지의 구조적 관계를 표현했습니다.",
   },
 
   {
     title: "WL Feature Extraction",
     description:
-      "Weisfeiler-Lehman Subtree 알고리즘을 적용하여 DOM Graph의 구조적 패턴을 Feature로 추출했습니다.",
+      "WL 차수가 증가하면서 Feature 수가 급격히 증가하는 문제를 완화하기 위해 Top-K Feature Selection을 적용하고 상위 3,000개 Feature를 사용했습니다.",
   },
 
   {
@@ -154,45 +154,37 @@ export default function DomPhishingPage() {
         />
 
         <ProjectContributions
+  contributions={[
+    {
+      title: "DOM Graph 생성 파이프라인 구현",
+      description:
+        "HTML Element 간의 부모-자식 관계를 구조적 정보로 활용하기 위해 DOM 기반 Graph 변환 데이터 처리 파이프라인을 설계 및 구현했습니다.",
+    },
 
-contributions={[
+    {
+      title: "WL Subtree 기반 구조적 Feature 설계",
+      description:
+        "요소 주변에 형성되는 지역적 구조 패턴을 표현하기 위해 Weisfeiler-Lehman 알고리즘을 적용하고, Random Forest 기반 피싱 분류 실험을 수행했습니다.",
+    },
 
-  {
-    title:"DOM Graph 생성 파이프라인 구현",
- description:
- "HTML 문서를 DOM 기반 Graph 구조로 변환하는 데이터 처리 파이프라인을 설계 및 구현했습니다.",
-  },
+    {
+      title: "Feature Representation 비교 및 검증",
+      description:
+        "구조적 Feature 자체의 효과를 분리해 검증하기 위해 동일한 Dataset과 분류 환경에서 Feature Representation을 변경하며 성능을 비교했습니다.",
+    },
 
+    {
+      title: "LLM 생성 피싱 환경으로 연구 확장",
+      description:
+        "실제 피싱 웹페이지에서는 LLM 생성 여부를 확인하기 어렵다는 점을 고려하여 6개 LLM과 8개 시나리오로 Synthetic Dataset을 구축하고, 기존 탐지 모델의 일반화 가능성을 검증했습니다.",
+    },
 
-  {
-    title:"WL Subtree Feature 및 Random Forest 기반 탐지 구현",
- description:
- "Weisfeiler-Lehman 알고리즘을 활용해 DOM Graph의 구조적 Feature를 추출하고, Random Forest 기반 피싱 분류 실험을 수행했습니다.",
-  },
-
-
-  {
-    title:"Feature 비교 및 성능 분석",
- description:
- "Tag Count, Semantic Feature, DOM Statistical Feature, WL Subtree Feature 등 다양한 Feature를 활용하여 피싱 탐지 성능을 비교 및 분석했습니다.",
-  },
-
-
-  {
-    title:"LLM 생성 피싱 웹페이지 일반화 실험",
- description:
- "실제 피싱 웹페이지로 학습한 탐지 모델을 LLM 생성 피싱 웹페이지에 적용하여, 구조적 Feature의 일반화 성능을 평가했습니다.",
-  },
-
-
-  {
-    title:"논문 작성 및 연구 결과 정리",
- description:
- "연구 결과를 정리하여 KCC 및 ICONIP 논문을 작성하고 연구 결과를 학술 발표 형태로 정리했습니다.",
-  },
-
-]}
-
+    {
+      title: "연구 결과 정리 및 발표",
+      description:
+        "실험 결과를 논문과 학술 발표 형태로 정리하고 KCC 및 ICONIP 연구 결과로 확장했습니다.",
+    },
+  ]}
 />
 
 <ProjectTroubleshooting
@@ -207,7 +199,7 @@ issues={[
       "전체 Graph 데이터를 메모리에 저장하는 방식으로 인해 메모리 사용량 증가",
 
     solution:
-      "Generator 기반 iter_graphs() 방식을 적용하여 순차 처리",
+      "실험 데이터와 조건을 유지하기 위해 데이터셋을 축소하지 않고, Generator 기반 iter_graphs() 방식으로 Graph를 순차 처리하도록 변경",
 
     result:
       "대규모 웹페이지 데이터셋 처리 가능",
@@ -239,7 +231,7 @@ issues={[
       "높은 차수의 WL Subtree Feature에서 Feature Explosion 및 Sparse Feature 발생",
 
     solution:
-      "Top-K Feature Selection을 적용하여 상위 3,000개 Feature 사용",
+      "Feature 차원을 통제하고 비교 실험의 일관성을 유지하기 위해 Top-K Feature Selection을 적용하여 상위 3,000개 Feature로 통일",
 
     result:
       "Feature 차원을 축소하고 분류 성능을 안정적으로 비교",
@@ -250,7 +242,7 @@ issues={[
 />
 <ProjectResults
 title= "KCC 2026 — 실제 피싱 웹페이지 탐지"
-description="실제 피싱 웹페이지를 대상으로 다양한 Feature의 탐지 성능을 비교하고, WL Subtree 기반 구조적 Feature의 효과를 평가했습니다."
+description="동일한 Dataset과 Random Forest 환경에서 Feature Representation만 변경하여 비교하고, DOM의 구조적 관계를 Feature로 활용하는 접근이 기존 Tag Count 및 DOM Statistical Feature보다 효과적인지 검증했습니다."
   
   metrics={[
     {
@@ -342,7 +334,7 @@ description="실제 피싱 웹페이지를 대상으로 다양한 Feature의 탐
     {
       title: "ICONIP 2026 Extended Abstract",
       description:
-        "기존 DOM Graph 기반 피싱 탐지 연구를 LLM 생성 피싱 웹페이지로 확장하고, 실제 피싱 웹페이지에서 학습한 구조적 Feature가 새로운 생성형 피싱 환경에서도 일반화될 수 있는지 검증했습니다.",
+        "기존 DOM Graph 기반 피싱 탐지 연구를 LLM-generated phishing 환경으로 확장하여 6개 LLM × 8개 시나리오의 Synthetic Dataset을 구축하고, 구조적 Feature의 일반화 가능성을 검증했습니다.",
     },
   ]}
 />
@@ -352,30 +344,24 @@ description="실제 피싱 웹페이지를 대상으로 다양한 Feature의 탐
 lessons={[
 
   {
-    title:
-"웹페이지 구조 기반 표현의 가능성",
-
-description:
-"HTML DOM 구조를 Graph로 표현하여 URL이나 시각적 정보에 의존하지 않고 구조적 Feature만으로 피싱 웹페이지를 분류할 수 있음을 확인했습니다."
-  },
+  title: "문제에 맞는 데이터 표현을 설계하는 것의 중요성",
+  description:
+    "모델을 적용하기 전에 데이터를 어떤 구조로 표현할 것인지 결정하는 것이 분석 방향과 성능에 직접적인 영향을 준다는 것을 경험했습니다.",
+},
 
 
   {
-    title:
-"WL Subtree Feature의 효과",
-
-description:
-"Weisfeiler-Lehman Subtree Feature가 피싱과 정상 웹페이지 간 구조적 차이를 효과적으로 표현할 수 있음을 확인하였습니다."
-  },
+  title: "구조적 Feature의 효과를 검증하는 방법",
+  description:
+    "동일한 Dataset과 분류 환경에서 Feature Representation만 변경하여 비교함으로써, 구조적 Feature 자체가 성능에 미치는 영향을 분리해 확인했습니다.",
+},
 
 
   {
-    title:
-"생성형 AI 환경에서의 일반화 가능성",
-
-description:
-"실제 피싱 웹페이지에서 학습한 국소적 DOM 구조 Feature가 LLM 생성 피싱 웹페이지에서도 효과적으로 활용될 수 있음을 확인했습니다."
-  },
+  title: "새로운 환경을 직접 실험군으로 만드는 방법",
+  description:
+    "기존 데이터에서 확인하기 어려운 조건을 검증하기 위해 LLM과 피싱 시나리오를 직접 통제한 Synthetic Dataset을 구축하고, 기존 모델의 일반화 가능성을 평가했습니다.",
+},
 
 ]}
 

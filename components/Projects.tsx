@@ -6,10 +6,10 @@ const projects: Project[] = [
     slug: "phishing",
     category: "AI 보안 연구 · 석사 연구 (KCC 2026 → ICONIP 2026 → 졸업논문)",
     description: [
-        "DOM 트리를 그래프로 변환하여 웹페이지 구조 표현",
-        "WL Subtree 기반 구조 특징 추출",
-        "Random Forest를 이용한 피싱 웹페이지 분류",
-        "LLM 생성 피싱 웹페이지를 대상으로 구조적 특징의 일반화 가능성 검증",
+        "HTML의 계층적 구조를 활용하기 위해 DOM을 Graph로 표현",
+"구조적 패턴을 표현하는 WL Subtree Feature를 설계하고 탐지 성능 비교",
+"동일한 Dataset과 분류 환경에서 Feature Representation의 효과를 검증",
+"6개 LLM × 8개 시나리오, 1,200개 Synthetic Dataset으로 일반화 가능성 검증",
     ],
     contribution: [
         "DOM 구조 기반 Graph 생성 및 Feature Extraction 파이프라인 설계·구현",
@@ -23,6 +23,8 @@ const projects: Project[] = [
       "ICONIP 2026 (Accepted)",
     ],
     achievements: [
+      "96.19% Accuracy",
+"93.76% Phishing Recall",
     "KCC 2026 우수발표논문상",
     "KCC 2026 한국 정보과학회 학술발표논문집 논문 게재",
   ],
@@ -59,9 +61,9 @@ const projects: Project[] = [
         "주행 환경 분석을 통한 안전 운행 지원",
   ],
   contribution: [
-  "신분증 정보와 사용자 얼굴의 동일성 비교 기능 개발",
-  "Face Recognition 모델을 활용한 얼굴 특징 비교 및 동일인 판별 구현",
-  "Flutter 기반 사용자 인증 기능 및 화면 구현",
+  "신분증 정보와 실시간 얼굴 비교를 통한 사용자 본인 인증 구현",
+  "신분증 정보와 실시간 얼굴 비교를 통한 사용자 본인 인증 구현",
+  "Flutter 기반 회원가입·인증·대여 화면 및 사용자 흐름 구현",
 ],
   conferences: [
       "ACK 2024",
@@ -106,9 +108,10 @@ const projects: Project[] = [
         "답변·음성·시선 분석 결과를 종합한 AI 면접 피드백 리포트 생성",
     ],
     contribution: [
-        "dlib 68-point Face Landmark 기반 시선 추적 기능 구현",
-        "캘리브레이션을 활용한 개인별 시선 영역 분석 로직 개발",
-        "Django REST Framework 기반 AI 분석 API 연동 및 결과 처리",
+        "사용자별 Calibration 기반 시선 추적 기능 구현",
+        "dlib 68-point Face Landmark 기반 시선 영역 분석 로직 개발",
+        "Django REST Framework 기반 AI 분석 API 구현 및 Frontend 연동",
+        "Backend 담당자 이탈 이후 필요한 기술을 직접 학습하여 서비스 통합",
     ],
     achievements: [
         "2024 이브와 ICT멘토링 참여",
@@ -136,9 +139,9 @@ const projects: Project[] = [
     slug: "portfolio",
     category: "웹 개발",
     description: [
-      "연구 중심 포트폴리오 웹사이트 개발",
-  "Next.js 기반 컴포넌트 구조 설계",
-  "Tailwind CSS를 활용한 반응형 UI 구현",
+      "연구 프로젝트의 문제 정의부터 성과까지 보여주는 정보 구조 설계",
+  "프로젝트별 콘텐츠를 재사용할 수 있도록 Next.js 기반 컴포넌트 구조화",
+  "긴 프로젝트 상세 페이지의 탐색성과 모바일 반응형 UI 개선",
     ],
     contribution: [
   "컴포넌트 기반 UI 설계",

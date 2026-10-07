@@ -40,10 +40,10 @@ export const publications = [
 
       year: "2026",
 
-      status: "초록 발표 채택 · 현장 포스터 발표 예정",
+      status: "초록 발표 채택 · 포스터 발표 예정",
   
       description:
-        "앞선 연구에서 학습한 DOM Graph의 구조적 특징이 LLM이 생성한 피싱 웹페이지에도 일반화될 수 있는지 연구했습니다. WL Subtree Feature를 활용해 실제 피싱 웹페이지로 모델을 학습하고 LLM 생성 피싱 웹페이지를 대상으로 평가했으며, 0.995의 phishing recall을 달성했습니다.",
+        "실제 피싱 웹페이지로 학습한 WL Subtree 기반 탐지 모델을 LLM 생성 피싱 웹페이지에 적용하여 일반화 가능성을 검증했습니다. LLM 생성 데이터에서 99.5%의 Phishing Recall을 달성했습니다.",
   
       
   },
